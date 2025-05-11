@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shagun Banquet Hall</title>
+    <meta name="description" content="Explore our stunning gallery of events, venue spaces, decorations, and culinary presentations at Shagun Banquet Hall in Uttarpara.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amaranth': {
+                            DEFAULT: '#a14258',
+                            100: '#210d12',
+                            200: '#411b24',
+                            300: '#622835',
+                            400: '#823547',
+                            500: '#a14258',
+                            600: '#be6076',
+                            700: '#ce8898',
+                            800: '#deafba',
+                            900: '#efd7dd'
+                        },
+                        'gold': {
+                            DEFAULT: '#d4af37',
+                            100: '#2c2409',
+                            200: '#584713',
+                            300: '#836b1c',
+                            400: '#af8f25',
+                            500: '#d4af37',
+                            600: '#ddbf5d',
+                            700: '#e5cf86',
+                            800: '#eedfae',
+                            900: '#f6efd7'
+                        },
+                        'silver': {
+                            DEFAULT: '#c0c0c0',
+                            100: '#262626',
+                            200: '#4d4d4d',
+                            300: '#737373',
+                            400: '#999999',
+                            500: '#c0c0c0',
+                            600: '#cccccc',
+                            700: '#d9d9d9',
+                            800: '#e6e6e6',
+                            900: '#f2f2f2'
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Lightbox2 for Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styling beyond Tailwind */
+        .page-banner {
+            height: 60vh;
+            min-height: 400px;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .gold-underline {
+            position: relative;
+        }
+        
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #d4af37;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+        
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        
+        .filter-button.active {
+            background-color: #a14258;
+            color: white;
+        }
+        
+        /* Custom for lightbox */
+        .lb-data .lb-caption {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Contact Button -->
+            <a href="contact.html" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+                Book Now
+            </a>
+        </div>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                    Book Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner relative pt-24">
+        <div class="bg-cover bg-center h-full" style="background-image: url('images/gallery/gallery-banner.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <div class="text-center text-white z-10 py-16" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-5xl font-serif font-semibold text-shadow mb-4">
+                        Our Gallery
+                    </h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                        Explore the elegance and sophistication of Shagun Banquet Hall through our visual showcase
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-600 hover:text-amaranth-500 text-sm">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-800 ml-1 text-sm font-medium">Gallery</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Gallery Filter Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button class="filter-button active px-6 py-2 rounded-full border border-amaranth-500 text-amaranth-500 hover:bg-amaranth-500 hover:text-white transition-colors" data-filter="all">
+                    All
+                </button>
+                <button class="filter-button px-6 py-2 rounded-full border border-amaranth-500 text-amaranth-500 hover:bg-amaranth-500 hover:text-white transition-colors" data-filter="recent-events">
+                    Recent Events
+                </button>
+                <button class="filter-button px-6 py-2 rounded-full border border-amaranth-500 text-amaranth-500 hover:bg-amaranth-500 hover:text-white transition-colors" data-filter="transformations">
+                    Space Transformations
+                </button>
+                <button class="filter-button px-6 py-2 rounded-full border border-amaranth-500 text-amaranth-500 hover:bg-amaranth-500 hover:text-white transition-colors" data-filter="culinary">
+                    Culinary Presentations
+                </button>
+                <button class="filter-button px-6 py-2 rounded-full border border-amaranth-500 text-amaranth-500 hover:bg-amaranth-500 hover:text-white transition-colors" data-filter="decor">
+                    Thematic Decorations
+                </button>
+                <button class="filter-button px-6 py-2 rounded-full border border-amaranth-500 text-amaranth-500 hover:bg-amaranth-500 hover:text-white transition-colors" data-filter="venue">
+                    Venue Features
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="pb-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Recent Events -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item recent-events" data-aos="fade-up" data-aos-delay="100">
+                    <a href="images/gallery/recent-events/wedding-1.jpg" data-lightbox="gallery" data-title="Traditional Bengali Wedding Ceremony">
+                        <img src="images/gallery/recent-events/wedding-1-thumbnail.jpg" alt="Traditional Bengali Wedding" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Traditional Bengali Wedding</h3>
+                            <p class="text-gray-200 text-sm">April 2025</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item recent-events" data-aos="fade-up" data-aos-delay="150">
+                    <a href="images/gallery/recent-events/reception-1.jpg" data-lightbox="gallery" data-title="Evening Reception with Crystal Chandelier Lighting">
+                        <img src="images/gallery/recent-events/reception-1-thumbnail.jpg" alt="Evening Reception" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Evening Reception</h3>
+                            <p class="text-gray-200 text-sm">March 2025</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item recent-events" data-aos="fade-up" data-aos-delay="200">
+                    <a href="images/gallery/recent-events/corporate-1.jpg" data-lightbox="gallery" data-title="Annual Corporate Conference Setup">
+                        <img src="images/gallery/recent-events/corporate-1-thumbnail.jpg" alt="Corporate Conference" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Corporate Conference</h3>
+                            <p class="text-gray-200 text-sm">February 2025</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item recent-events sm:col-span-2" data-aos="fade-up" data-aos-delay="250">
+                    <a href="images/gallery/recent-events/engagement-1.jpg" data-lightbox="gallery" data-title="Engagement Ceremony with Gold and White Theme">
+                        <img src="images/gallery/recent-events/engagement-1-thumbnail.jpg" alt="Engagement Ceremony" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Engagement Ceremony</h3>
+                            <p class="text-gray-200 text-sm">May 2025</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Space Transformations -->                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item transformations sm:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <a href="images/gallery/transformations/before-after-1.jpg" data-lightbox="gallery" data-title="Main Hall Transformation - Before and After">
+                        <img src="images/gallery/transformations/before-after-1-thumbnail.jpg" alt="Before and After Transformation" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Main Hall Transformation</h3>
+                            <p class="text-gray-200 text-sm">Before & After</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item transformations" data-aos="fade-up" data-aos-delay="150">
+                    <a href="images/gallery/transformations/transform-2.jpg" data-lightbox="gallery" data-title="Stage Area Transformation for Wedding Reception">
+                        <img src="images/gallery/transformations/transform-2-thumbnail.jpg" alt="Stage Transformation" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Stage Transformation</h3>
+                            <p class="text-gray-200 text-sm">Wedding Reception</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item transformations" data-aos="fade-up" data-aos-delay="200">
+                    <a href="images/gallery/transformations/transform-3.jpg" data-lightbox="gallery" data-title="Entrance Decoration Transformation">
+                        <img src="images/gallery/transformations/transform-3-thumbnail.jpg" alt="Entrance Transformation" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Entrance Transformation</h3>
+                            <p class="text-gray-200 text-sm">Before & After</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Culinary Presentations -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item culinary" data-aos="fade-up" data-aos-delay="100">
+                    <a href="images/gallery/culinary/food-1.jpg" data-lightbox="gallery" data-title="Bengali Cuisine Spread">
+                        <img src="images/gallery/culinary/food-1-thumbnail.jpg" alt="Bengali Cuisine" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Bengali Cuisine</h3>
+                            <p class="text-gray-200 text-sm">Traditional Spread</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item culinary" data-aos="fade-up" data-aos-delay="150">
+                    <a href="images/gallery/culinary/food-2.jpg" data-lightbox="gallery" data-title="Elegant Buffet Setup">
+                        <img src="images/gallery/culinary/food-2-thumbnail.jpg" alt="Buffet Setup" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Buffet Setup</h3>
+                            <p class="text-gray-200 text-sm">Corporate Event</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item culinary sm:col-span-2" data-aos="fade-up" data-aos-delay="200">
+                    <a href="images/gallery/culinary/food-3.jpg" data-lightbox="gallery" data-title="Multi-Cuisine Gourmet Experience">
+                        <img src="images/gallery/culinary/food-3-thumbnail.jpg" alt="Gourmet Experience" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Gourmet Experience</h3>
+                            <p class="text-gray-200 text-sm">Wedding Reception</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item culinary" data-aos="fade-up" data-aos-delay="250">
+                    <a href="images/gallery/culinary/dessert-1.jpg" data-lightbox="gallery" data-title="Dessert Station">
+                        <img src="images/gallery/culinary/dessert-1-thumbnail.jpg" alt="Dessert Station" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Dessert Station</h3>
+                            <p class="text-gray-200 text-sm">Sweet Delights</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Thematic Decorations -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item decor sm:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <a href="images/gallery/decor/decor-1.jpg" data-lightbox="gallery" data-title="Royal Indian Wedding Theme">
+                        <img src="images/gallery/decor/decor-1-thumbnail.jpg" alt="Royal Indian Wedding Theme" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Royal Indian Wedding</h3>
+                            <p class="text-gray-200 text-sm">Traditional Elegance</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item decor" data-aos="fade-up" data-aos-delay="150">
+                    <a href="images/gallery/decor/decor-2.jpg" data-lightbox="gallery" data-title="Contemporary Minimalist Theme">
+                        <img src="images/gallery/decor/decor-2-thumbnail.jpg" alt="Contemporary Theme" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Contemporary Theme</h3>
+                            <p class="text-gray-200 text-sm">Modern Minimalism</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item decor" data-aos="fade-up" data-aos-delay="200">
+                    <a href="images/gallery/decor/decor-3.jpg" data-lightbox="gallery" data-title="Rustic Garden Theme">
+                        <img src="images/gallery/decor/decor-3-thumbnail.jpg" alt="Rustic Garden Theme" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Rustic Garden</h3>
+                            <p class="text-gray-200 text-sm">Nature-Inspired</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item decor" data-aos="fade-up" data-aos-delay="250">
+                    <a href="images/gallery/decor/decor-4.jpg" data-lightbox="gallery" data-title="Celestial Night Sky Theme">
+                        <img src="images/gallery/decor/decor-4-thumbnail.jpg" alt="Celestial Theme" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Celestial Night Sky</h3>
+                            <p class="text-gray-200 text-sm">Evening Enchantment</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Venue Features -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item venue" data-aos="fade-up" data-aos-delay="100">
+                    <a href="images/gallery/venue/venue-1.jpg" data-lightbox="gallery" data-title="Main Hall with Crystal Chandeliers">
+                        <img src="images/gallery/venue/venue-1-thumbnail.jpg" alt="Main Hall" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Main Hall</h3>
+                            <p class="text-gray-200 text-sm">Crystal Chandeliers</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item venue" data-aos="fade-up" data-aos-delay="150">
+                    <a href="images/gallery/venue/venue-2.jpg" data-lightbox="gallery" data-title="Entrance Lobby">
+                        <img src="images/gallery/venue/venue-2-thumbnail.jpg" alt="Entrance Lobby" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Entrance Lobby</h3>
+                            <p class="text-gray-200 text-sm">First Impressions</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item venue" data-aos="fade-up" data-aos-delay="200">
+                    <a href="images/gallery/venue/venue-3.jpg" data-lightbox="gallery" data-title="Stage Area with Lighting Setup">
+                        <img src="images/gallery/venue/venue-3-thumbnail.jpg" alt="Stage Area" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Stage Area</h3>
+                            <p class="text-gray-200 text-sm">Premium Lighting</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item venue sm:col-span-2" data-aos="fade-up" data-aos-delay="250">
+                    <a href="images/gallery/venue/venue-4.jpg" data-lightbox="gallery" data-title="Aerial View of the Banquet Hall Complex">
+                        <img src="images/gallery/venue/venue-4-thumbnail.jpg" alt="Aerial View" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Aerial View</h3>
+                            <p class="text-gray-200 text-sm">Banquet Complex</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg h-64 filter-item venue" data-aos="fade-up" data-aos-delay="300">
+                    <a href="images/gallery/venue/venue-5.jpg" data-lightbox="gallery" data-title="Complementary Suite">
+                        <img src="images/gallery/venue/venue-5-thumbnail.jpg" alt="Complementary Suite" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <h3 class="text-white text-xl font-serif">Complementary Suite</h3>
+                            <p class="text-gray-200 text-sm">Private Space</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-semibold text-gray-800 mb-6">
+                Ready to Create Your Own Memories?
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                Let us help you plan your special day at Shagun Banquet Hall. Our team is ready to transform your vision into reality.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                    Book a Consultation
+                </a>
+                <a href="packages.html" class="bg-transparent hover:bg-gold text-gold hover:text-white font-medium py-3 px-8 border border-gold rounded-full transition-colors">
+                    View Packages
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Contact Information -->
+                <div>
+                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Creating memorable celebrations with elegance and sophistication.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-300">105, Bijay Krishna Street, Near Telephone Exchange, Kotrung, Uttarpara, West Bengal</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-gold mr-3"></i>
+                            <p class="text-gray-300">+91 [Phone Number]</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-3"></i>
+                            <p class="text-gray-300">info@shagunbanquet.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="venues.html" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
+                        <li><a href="packages.html" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Business Hours</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Monday - Saturday</span>
+                            <span class="text-gold">9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Sunday</span>
+                            <span class="text-gold">Closed</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Subscribe to Updates</h3>
+                    <p class="text-gray-300 mb-4">
+                        Stay informed about our latest offers and packages.
+                    </p>
+                    <form class="space-y-3">
+                        <div>
+                            <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        <button type="submit" class="bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Shagun Banquet Hall. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Gallery Filtering
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const filterItems = document.querySelectorAll('.filter-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter items
+                    filterItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else if (item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                    
+                    // Re-initialize AOS after filtering
+                    setTimeout(() => {
+                        AOS.refresh();
+                    }, 500);
+                });
+            });
+            
+            // Lightbox Configuration
+            lightbox.option({
+                'resizeDuration': 300,
+                'wrapAround': true,
+                'albumLabel': "Image %1 of %2",
+                'fadeDuration': 300
+            });
+        });
+    </script>
+</body>
+</html>

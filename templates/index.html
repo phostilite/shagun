@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shagun Banquet Hall - Uttarpara's Premier Event Destination</title>
+    <meta name="description" content="Experience elegance and impeccable service at Shagun Banquet Hall in Uttarpara. Perfect for weddings, receptions, and corporate events with capacity for 150-500 guests.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amaranth': {
+                            DEFAULT: '#a14258',
+                            100: '#210d12',
+                            200: '#411b24',
+                            300: '#622835',
+                            400: '#823547',
+                            500: '#a14258',
+                            600: '#be6076',
+                            700: '#ce8898',
+                            800: '#deafba',
+                            900: '#efd7dd'
+                        },
+                        'gold': {
+                            DEFAULT: '#d4af37',
+                            100: '#2c2409',
+                            200: '#584713',
+                            300: '#836b1c',
+                            400: '#af8f25',
+                            500: '#d4af37',
+                            600: '#ddbf5d',
+                            700: '#e5cf86',
+                            800: '#eedfae',
+                            900: '#f6efd7'
+                        },
+                        'silver': {
+                            DEFAULT: '#c0c0c0',
+                            100: '#262626',
+                            200: '#4d4d4d',
+                            300: '#737373',
+                            400: '#999999',
+                            500: '#c0c0c0',
+                            600: '#cccccc',
+                            700: '#d9d9d9',
+                            800: '#e6e6e6',
+                            900: '#f2f2f2'
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styling beyond Tailwind */
+        .hero-slider {
+            height: 80vh;
+            min-height: 500px;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .gold-underline {
+            position: relative;
+        }
+        
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #d4af37;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 3em; /* Fallback for browsers that don't support line-clamp */
+        }
+
+        .tooltip-container {
+            position: relative;
+        }
+        
+        .tooltip-container:hover .tooltip {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Content will go here -->
+
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Contact Button -->
+            <a href="contact.html" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+                Book Now
+            </a>
+        </div>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                    Book Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section with Slider -->
+    <section class="hero-slider relative overflow-hidden pt-24">
+        <!-- Slider container -->
+        <div class="slider-container relative h-full">
+            <!-- Slide 1 -->
+            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+                <div class="bg-cover bg-center h-full" style="background-image: url('images/banquet-hall-1.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                        <div class="text-center text-white z-10 max-w-3xl" data-aos="fade-up">
+                            <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
+                                Uttarpara's Premier Event Destination
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 text-shadow">
+                                Where Memorable Celebrations Come to Life
+                            </p>
+                            <a href="contact.html" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                                Plan Your Special Day
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <div class="bg-cover bg-center h-full" style="background-image: url('images/banquet-hall-2.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                        <div class="text-center text-white z-10 max-w-3xl" data-aos="fade-up">
+                            <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
+                                Elegant Celebrations, Timeless Memories
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 text-shadow">
+                                Creating Magical Moments Since [Year]
+                            </p>
+                            <a href="gallery.html" class="inline-block bg-gold hover:bg-gold-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                                Explore Our Gallery
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <div class="bg-cover bg-center h-full" style="background-image: url('images/banquet-hall-3.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                        <div class="text-center text-white z-10 max-w-3xl" data-aos="fade-up">
+                            <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
+                                Excellence in Every Detail
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 text-shadow">
+                                Personalized Services for Your Perfect Event
+                            </p>
+                            <a href="services.html" class="inline-block bg-white text-amaranth-500 hover:text-amaranth-600 font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                                Discover Our Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 p-2 rounded-full z-10" id="prev-slide">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 p-2 rounded-full z-10" id="next-slide">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Slider Pagination -->
+            <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-10">
+                <button class="w-3 h-3 rounded-full bg-white bg-opacity-100 border border-white" data-slide="0"></button>
+                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 border border-white" data-slide="1"></button>
+                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 border border-white" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Quick Introduction Section -->
+    <section class="py-20 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Welcome to Shagun Banquet Hall
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Shagun Banquet Hall in Uttarpara, West Bengal has established itself as a premier event venue
+                    in the region, offering a sophisticated blend of elegant ambiance and comprehensive services.
+                    Located near the Uttarpara Telephone Exchange, our venue provides the perfect setting for weddings,
+                    receptions, corporate events, and special occasions with capacity for 150-500 guests.
+                </p>
+                <a href="about.html" class="inline-block text-amaranth-500 hover:text-amaranth-600 font-medium border-b-2 border-amaranth-500 hover:border-amaranth-600 transition-colors">
+                    Learn More About Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Space Showcase Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Our Elegant Spaces
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                    Discover our versatile event spaces designed to accommodate celebrations of all sizes, 
+                    each offering distinctive charm and sophisticated ambiance.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Main Hall -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/main-hall.jpg" alt="Main Banquet Hall" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Main Banquet Hall</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4 line-clamp-2">Our grandest space with crystal chandeliers and elegant décor, perfect for weddings and large celebrations.</p>
+                        <ul class="mb-6 text-gray-600">
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-users text-gold mr-2"></i> Capacity: 150-400 guests
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-ruler-combined text-gold mr-2"></i> Area: [Size] sq. ft.
+                            </li>
+                        </ul>
+                        <a href="venues.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Secondary Space -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/secondary-hall.jpg" alt="Secondary Event Space" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Secondary Space</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4 line-clamp-2">A versatile space with contemporary design, ideal for medium-sized gatherings and corporate events.</p>
+                        <ul class="mb-6 text-gray-600">
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-users text-gold mr-2"></i> Capacity: [Number] guests
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-ruler-combined text-gold mr-2"></i> Area: [Size] sq. ft.
+                            </li>
+                        </ul>
+                        <a href="venues.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Intimate Space -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/intimate-space.jpg" alt="Intimate Event Space" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Intimate Space</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4 line-clamp-2">A charming space with warm lighting and cozy atmosphere, perfect for smaller celebrations.</p>
+                        <ul class="mb-6 text-gray-600">
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-users text-gold mr-2"></i> Capacity: [Number] guests
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-ruler-combined text-gold mr-2"></i> Area: [Size] sq. ft.
+                            </li>
+                        </ul>
+                        <a href="venues.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Highlights Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Our Premium Services
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We provide comprehensive event services tailored to your vision, ensuring your celebration is flawless from concept to execution.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Catering Service -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md text-center transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Exquisite Catering</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our in-house culinary team prepares delectable vegetarian and non-vegetarian cuisines using fresh, high-quality ingredients.
+                    </p>
+                    <p class="text-gold font-medium">
+                        Starting from ₹900/plate
+                    </p>
+                </div>
+                
+                <!-- Decoration Service -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md text-center transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6">
+                        <i class="fas fa-magic text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Elegant Décor</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transform our space with exquisite decorations tailored to your theme, from floral arrangements to lighting design.
+                    </p>
+                    <p class="text-gold font-medium">
+                        Starting from ₹20,000
+                    </p>
+                </div>
+                
+                <!-- Entertainment Service -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md text-center transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6">
+                        <i class="fas fa-music text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Entertainment</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional DJ services and state-of-the-art sound systems to keep your guests entertained throughout your event.
+                    </p>
+                    <p class="text-gold font-medium">
+                        Starting from ₹8,000
+                    </p>
+                </div>
+                
+                <!-- Event Planning Service -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md text-center transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6">
+                        <i class="fas fa-calendar-check text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Event Planning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our experienced team handles every detail from conceptualization to execution, ensuring a seamless celebration.
+                    </p>
+                    <p class="text-gold font-medium">
+                        Complimentary with bookings
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="services.html" class="inline-block bg-transparent hover:bg-amaranth-500 text-amaranth-500 hover:text-white font-medium py-3 px-8 border border-amaranth-500 hover:border-transparent rounded-full transition-colors">
+                    Explore All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Decorative Background Element -->
+        <div class="absolute inset-0 opacity-5">
+            <img src="images/pattern.png" alt="" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Customer Rating -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-gold mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="text-5xl font-serif font-bold text-amaranth-500 mb-3">4.3/5</div>
+                    <p class="text-lg text-gray-600">Customer Rating</p>
+                </div>
+                
+                <!-- Review Count -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-amaranth-500 mb-3">
+                        <i class="fas fa-comments text-4xl"></i>
+                    </div>
+                    <div class="text-5xl font-serif font-bold text-amaranth-500 mb-3">1,200+</div>
+                    <p class="text-lg text-gray-600">Verified Reviews</p>
+                </div>
+                
+                <!-- Events Hosted -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-amaranth-500 mb-3">
+                        <i class="fas fa-glass-cheers text-4xl"></i>
+                    </div>
+                    <div class="text-5xl font-serif font-bold text-amaranth-500 mb-3">5,000+</div>
+                    <p class="text-lg text-gray-600">Events Hosted</p>
+                </div>
+                
+                <!-- Years in Business -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-amaranth-500 mb-3">
+                        <i class="fas fa-calendar-alt text-4xl"></i>
+                    </div>
+                    <div class="text-5xl font-serif font-bold text-amaranth-500 mb-3">[X]</div>
+                    <p class="text-lg text-gray-600">Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Featured Testimonial Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    What Our Guests Say
+                </h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Testimonial Image -->
+                    <div class="md:w-2/5 relative">
+                        <img src="images/wedding-celebration.jpg" alt="Happy Couple at Shagun Banquet Hall" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-amaranth-500 opacity-20"></div>
+                    </div>
+                    
+                    <!-- Testimonial Content -->
+                    <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="text-gold mb-6">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="text-gray-600 italic text-lg mb-6">
+                            "Our wedding at Shagun Banquet Hall exceeded all expectations. The staff's attention to detail, the exquisite food, and the stunning décor created the perfect atmosphere for our special day. From our first meeting to the final moments of our reception, the team demonstrated exceptional professionalism and creativity."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="images/testimonial-author.jpg" alt="Testimonial Author" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="font-serif font-medium text-gray-800">Priya & Rahul Sharma</p>
+                                <p class="text-sm text-gray-500">Wedding Celebration, March 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="testimonials.html" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                    Read More Testimonials
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Preview Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Glimpses of Elegance
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Explore visual highlights of our venue and the memorable celebrations we've hosted.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+                <!-- Image 1 -->
+                <div class="relative overflow-hidden rounded-lg h-64 col-span-2 row-span-2">
+                    <img src="images/gallery-1.jpg" alt="Decorated Banquet Hall" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Wedding Reception</p>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="relative overflow-hidden rounded-lg h-64">
+                    <img src="images/gallery-2.jpg" alt="Table Setting" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Elegant Dining</p>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="relative overflow-hidden rounded-lg h-64">
+                    <img src="images/gallery-3.jpg" alt="Wedding Ceremony" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Wedding Ceremony</p>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="relative overflow-hidden rounded-lg h-64">
+                    <img src="images/gallery-4.jpg" alt="Venue Exterior" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Venue Exterior</p>
+                    </div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="relative overflow-hidden rounded-lg h-64">
+                    <img src="images/gallery-5.jpg" alt="Corporate Event" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                        <p class="text-white p-4 font-medium">Corporate Event</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="gallery.html" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                    View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/cta-background.jpg');">
+        <div class="absolute inset-0 bg-amaranth-500 opacity-90"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">
+                    Plan Your Special Day With Us
+                </h2>
+                <p class="text-xl opacity-90 mb-10">
+                    Let us help you create memories that will last a lifetime. Contact our event specialists today to begin planning your perfect celebration.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="contact.html" class="inline-block bg-white text-amaranth-500 hover:bg-gold hover:text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                        Book a Consultation
+                    </a>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt mr-3 text-gold"></i>
+                        <span class="text-xl">+91 [Phone Number]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Contact Information -->
+                <div>
+                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Creating memorable celebrations with elegance and sophistication.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-300">105, Bijay Krishna Street, Near Telephone Exchange, Kotrung, Uttarpara, West Bengal</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-gold mr-3"></i>
+                            <p class="text-gray-300">+91 [Phone Number]</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-3"></i>
+                            <p class="text-gray-300">info@shagunbanquet.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="venues.html" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
+                        <li><a href="packages.html" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Business Hours</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Monday - Saturday</span>
+                            <span class="text-gold">9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Sunday</span>
+                            <span class="text-gold">Closed</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Subscribe to Updates</h3>
+                    <p class="text-gray-300 mb-4">
+                        Stay informed about our latest offers and packages.
+                    </p>
+                    <form class="space-y-3">
+                        <div>
+                            <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        <button type="submit" class="bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Shagun Banquet Hall. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Bubbles -->
+    <div class="fixed bottom-6 right-6 flex flex-col-reverse items-center space-y-reverse space-y-3 z-40">
+        <!-- Main Toggle Button -->
+        <button id="contact-toggle" class="bg-amaranth-500 hover:bg-amaranth-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 transform hover:scale-110 focus:outline-none">
+            <i class="fas fa-comment-dots text-2xl"></i>
+        </button>
+        
+        <!-- Contact Options (Hidden by default) -->
+        <div id="contact-options" class="hidden flex flex-col-reverse items-center space-y-reverse space-y-3">
+            <!-- Email Button -->
+            <a href="mailto:info@shagunbanquet.com" class="bg-gray-600 hover:bg-gray-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all tooltip-container">
+                <i class="fas fa-envelope"></i>
+                <span class="tooltip absolute right-full mr-3 bg-gray-800 text-white text-xs py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Email Us</span>
+            </a>
+            
+            <!-- Phone Button -->
+            <a href="tel:+91XXXXXXXXXX" class="bg-blue-500 hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all tooltip-container">
+                <i class="fas fa-phone-alt"></i>
+                <span class="tooltip absolute right-full mr-3 bg-gray-800 text-white text-xs py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Call Us</span>
+            </a>
+            
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="bg-green-500 hover:bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all tooltip-container">
+                <i class="fab fa-whatsapp text-xl"></i>
+                <span class="tooltip absolute right-full mr-3 bg-gray-800 text-white text-xs py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">WhatsApp</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        });
+    </script>
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                }
+            });
+            
+            // Hero Slider Functionality
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.absolute.bottom-8 button');
+            const prevBtn = document.getElementById('prev-slide');
+            const nextBtn = document.getElementById('next-slide');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.style.opacity = '0';
+                    slide.style.zIndex = '0';
+                });
+                
+                // Reset all dots
+                dots.forEach(dot => {
+                    dot.classList.remove('bg-opacity-100');
+                    dot.classList.add('bg-opacity-50');
+                });
+                
+                // Show current slide
+                slides[index].style.opacity = '1';
+                slides[index].style.zIndex = '1';
+                
+                // Highlight current dot
+                dots[index].classList.remove('bg-opacity-50');
+                dots[index].classList.add('bg-opacity-100');
+                
+                currentSlide = index;
+            }
+            
+            // Initialize slider
+            showSlide(0);
+            
+            // Set up automatic sliding
+            let slideInterval = setInterval(() => {
+                showSlide((currentSlide + 1) % slides.length);
+            }, 5000);
+            
+            // Next button click
+            nextBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide((currentSlide + 1) % slides.length);
+                
+                // Restart auto-sliding
+                slideInterval = setInterval(() => {
+                    showSlide((currentSlide + 1) % slides.length);
+                }, 5000);
+            });
+            
+            // Previous button click
+            prevBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide((currentSlide - 1 + slides.length) % slides.length);
+                
+                // Restart auto-sliding
+                slideInterval = setInterval(() => {
+                    showSlide((currentSlide + 1) % slides.length);
+                }, 5000);
+            });
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(index);
+                    
+                    // Restart auto-sliding
+                    slideInterval = setInterval(() => {
+                        showSlide((currentSlide + 1) % slides.length);
+                    }, 5000);
+                });
+            });
+
+            const contactToggle = document.getElementById('contact-toggle');
+            const contactOptions = document.getElementById('contact-options');
+            
+            contactToggle.addEventListener('click', function() {
+                contactOptions.classList.toggle('hidden');
+                
+                // Animate the toggle button
+                if (!contactOptions.classList.contains('hidden')) {
+                    contactToggle.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+                    contactToggle.classList.add('rotate-45');
+                } else {
+                    contactToggle.innerHTML = '<i class="fas fa-comment-dots text-2xl"></i>';
+                    contactToggle.classList.remove('rotate-45');
+                }
+            });
+            
+            // Close contact options when clicking elsewhere
+            document.addEventListener('click', function(event) {
+                if (!contactToggle.contains(event.target) && !contactOptions.contains(event.target) && !contactOptions.classList.contains('hidden')) {
+                    contactOptions.classList.add('hidden');
+                    contactToggle.innerHTML = '<i class="fas fa-comment-dots text-2xl"></i>';
+                    contactToggle.classList.remove('rotate-45');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

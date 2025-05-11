@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages & Pricing - Shagun Banquet Hall</title>
+    <meta name="description" content="Explore our customizable wedding, corporate, and social gathering packages at Shagun Banquet Hall in Uttarpara. Transparent pricing and flexible options for every occasion.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amaranth': {
+                            DEFAULT: '#a14258',
+                            100: '#210d12',
+                            200: '#411b24',
+                            300: '#622835',
+                            400: '#823547',
+                            500: '#a14258',
+                            600: '#be6076',
+                            700: '#ce8898',
+                            800: '#deafba',
+                            900: '#efd7dd'
+                        },
+                        'gold': {
+                            DEFAULT: '#d4af37',
+                            100: '#2c2409',
+                            200: '#584713',
+                            300: '#836b1c',
+                            400: '#af8f25',
+                            500: '#d4af37',
+                            600: '#ddbf5d',
+                            700: '#e5cf86',
+                            800: '#eedfae',
+                            900: '#f6efd7'
+                        },
+                        'silver': {
+                            DEFAULT: '#c0c0c0',
+                            100: '#262626',
+                            200: '#4d4d4d',
+                            300: '#737373',
+                            400: '#999999',
+                            500: '#c0c0c0',
+                            600: '#cccccc',
+                            700: '#d9d9d9',
+                            800: '#e6e6e6',
+                            900: '#f2f2f2'
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styling beyond Tailwind */
+        .page-banner {
+            height: 60vh;
+            min-height: 400px;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .gold-underline {
+            position: relative;
+        }
+        
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #d4af37;
+        }
+        
+        .package-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .tab-button.active {
+            color: #a14258;
+            border-color: #d4af37;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Contact Button -->
+            <a href="contact.html" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+                Book Now
+            </a>
+        </div>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                    Book Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner relative overflow-hidden pt-24">
+        <div class="bg-cover bg-center h-full" style="background-image: url('images/packages/packages-banner.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <div class="text-center text-white z-10 max-w-3xl" data-aos="fade-up">
+                    <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
+                        Packages & Pricing
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-shadow">
+                        Transparent pricing options tailored to your celebration needs
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-600 hover:text-amaranth-500 text-sm">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-800 ml-1 text-sm font-medium">Packages</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Customizable Celebration Packages
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    At Shagun Banquet Hall, we understand that every celebration is unique. Our carefully crafted packages are designed to accommodate a variety of preferences, needs, and budgets. From intimate gatherings to grand affairs, our experienced team will help you select the perfect package and customize it to create your dream event.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Categories Tabs -->
+    <section class="py-10 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap border-b border-gray-200 mb-12" data-aos="fade-up">
+                <button class="tab-button active text-lg font-medium px-8 py-3 border-b-2 border-transparent hover:text-amaranth-500 transition-colors focus:outline-none mr-6" data-tab="wedding">
+                    Wedding Packages
+                </button>
+                <button class="tab-button text-lg font-medium px-8 py-3 border-b-2 border-transparent hover:text-amaranth-500 transition-colors focus:outline-none mr-6" data-tab="corporate">
+                    Corporate Events
+                </button>
+                <button class="tab-button text-lg font-medium px-8 py-3 border-b-2 border-transparent hover:text-amaranth-500 transition-colors focus:outline-none" data-tab="social">
+                    Social Gatherings
+                </button>
+            </div>
+
+            <!-- Wedding Packages Content -->
+            <div id="wedding-tab" class="tab-content active">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Classic Wedding Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 bg-amaranth-300">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Classic</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹1,25,000</p>
+                                <p class="text-gray-500">For up to 150 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 6 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Vegetarian catering (₹900/plate)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Basic decoration package</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Basic lighting setup</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Standard sound system</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">2 complimentary changing rooms</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated event coordinator</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Premium Wedding Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-xl transform scale-105 border-t-4 border-gold" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute top-0 right-0 bg-gold text-white px-4 py-1 text-sm font-medium">
+                            Most Popular
+                        </div>
+                        <div class="relative h-48 bg-amaranth-400">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Premium</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹1,75,000</p>
+                                <p class="text-gray-500">For up to 250 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 8 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Mixed veg/non-veg catering</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Enhanced decoration package</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Premium lighting setup</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Professional DJ for 4 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Welcome drinks & mocktails</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">2 complimentary changing rooms</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated event coordinator</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Special stage backdrop</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Luxury Wedding Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 bg-amaranth-500">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Luxury</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹2,50,000</p>
+                                <p class="text-gray-500">For up to 400 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 10 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Premium catering with multiple counters</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Luxury decoration package</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Designer lighting arrangement</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Professional DJ for 8 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Welcome drinks, mocktails & dessert bar</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Complimentary changing rooms with refreshments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated planning team</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Custom stage design & premium backdrop</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Valet parking service</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate Events Content -->
+            <div id="corporate-tab" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Basic Corporate Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 bg-amaranth-300">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Basic Conference</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹75,000</p>
+                                <p class="text-gray-500">For up to 50 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 4 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Standard conference setup</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Basic AV equipment</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Tea/coffee and snacks</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Wireless internet</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Basic stationery</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated coordinator</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Premium Corporate Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-xl transform scale-105 border-t-4 border-gold" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute top-0 right-0 bg-gold text-white px-4 py-1 text-sm font-medium">
+                            Most Popular
+                        </div>
+                        <div class="relative h-48 bg-amaranth-400">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Premium Conference</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹1,25,000</p>
+                                <p class="text-gray-500">For up to 100 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 6 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Enhanced conference setup</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Full AV equipment with technician</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Welcome tea/coffee with breakfast</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Lunch buffet</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Evening refreshments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">High-speed internet</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Corporate stationery kit</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated event manager</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Executive Corporate Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 bg-amaranth-500">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Executive Conference</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹1,85,000</p>
+                                <p class="text-gray-500">For up to 150 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 8 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Luxury conference setup</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Premium AV equipment with dedicated technician</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Morning refreshments and breakfast</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Gourmet lunch buffet</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Evening high tea</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Ultra-high-speed internet</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Executive stationery kit</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Photography service</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Private meeting room</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Valet parking service</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Gatherings Content -->
+            <div id="social-tab" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Basic Social Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 bg-amaranth-300">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Essential Celebration</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹85,000</p>
+                                <p class="text-gray-500">For up to 100 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 4 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Vegetarian catering (₹900/plate)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Basic decoration</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Standard sound system</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Basic lighting</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated event coordinator</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Complimentary changing room</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Premium Social Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-xl transform scale-105 border-t-4 border-gold" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute top-0 right-0 bg-gold text-white px-4 py-1 text-sm font-medium">
+                            Most Popular
+                        </div>
+                        <div class="relative h-48 bg-amaranth-400">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Deluxe Celebration</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹1,35,000</p>
+                                <p class="text-gray-500">For up to 200 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 6 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Mixed veg/non-veg catering</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Premium decoration package</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Enhanced lighting setup</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Professional DJ for 4 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Welcome drinks</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Photo booth with props</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated event manager</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Complimentary changing rooms</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Luxury Social Package -->
+                    <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 bg-amaranth-500">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <h3 class="text-2xl font-serif font-semibold text-white text-shadow">Grand Celebration</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <p class="text-4xl font-serif font-bold text-amaranth-500 mb-2">₹2,00,000</p>
+                                <p class="text-gray-500">For up to 300 guests</p>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Venue rental for 8 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Premium catering with multiple counters</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Luxury decoration package</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Designer lighting arrangement</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Professional DJ for 6 hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Welcome drinks & mocktail bar</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dessert station</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Professional photography (4 hours)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Photo booth with live printing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Dedicated event team</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                    <span class="text-gray-600">Valet parking service</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                                Book This Package
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À La Carte Services Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    À La Carte Services
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Customize your event with our additional services to match your specific requirements.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Catering Service -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800">Catering Services</h3>
+                        <div class="w-16 h-16 rounded-full bg-amaranth-100 flex items-center justify-center">
+                            <i class="fas fa-utensils text-2xl text-amaranth-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Vegetarian Menu</span>
+                            <span class="font-medium text-amaranth-500">From ₹900/plate</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Non-Vegetarian Menu</span>
+                            <span class="font-medium text-amaranth-500">From ₹1,000/plate</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Premium Multi-Cuisine</span>
+                            <span class="font-medium text-amaranth-500">From ₹1,200/plate</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Dessert Station</span>
+                            <span class="font-medium text-amaranth-500">From ₹150/person</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Welcome Drinks</span>
+                            <span class="font-medium text-amaranth-500">From ₹100/person</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">
+                        All catering services must be provided by our in-house team.
+                    </p>
+                </div>
+                
+                <!-- Decoration Service -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800">Decoration Services</h3>
+                        <div class="w-16 h-16 rounded-full bg-amaranth-100 flex items-center justify-center">
+                            <i class="fas fa-magic text-2xl text-amaranth-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Basic Decoration Package</span>
+                            <span class="font-medium text-amaranth-500">From ₹20,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Premium Decoration Package</span>
+                            <span class="font-medium text-amaranth-500">From ₹35,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Luxury Decoration Package</span>
+                            <span class="font-medium text-amaranth-500">From ₹50,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Floral Arrangements</span>
+                            <span class="font-medium text-amaranth-500">From ₹10,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Themed Decoration</span>
+                            <span class="font-medium text-amaranth-500">Custom Quote</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">
+                        All decorations must be arranged through our panel-approved decorators.
+                    </p>
+                </div>
+                
+                <!-- Entertainment Service -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800">Entertainment Services</h3>
+                        <div class="w-16 h-16 rounded-full bg-amaranth-100 flex items-center justify-center">
+                            <i class="fas fa-music text-2xl text-amaranth-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Professional DJ (4 hours)</span>
+                            <span class="font-medium text-amaranth-500">From ₹8,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Professional DJ (8 hours)</span>
+                            <span class="font-medium text-amaranth-500">From ₹15,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Live Music Band</span>
+                            <span class="font-medium text-amaranth-500">From ₹25,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Photo Booth (2 hours)</span>
+                            <span class="font-medium text-amaranth-500">From ₹10,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Dance Floor Setup</span>
+                            <span class="font-medium text-amaranth-500">From ₹15,000</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">
+                        Entertainment services are subject to availability.
+                    </p>
+                </div>
+                
+                <!-- Technical Service -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800">Technical Services</h3>
+                        <div class="w-16 h-16 rounded-full bg-amaranth-100 flex items-center justify-center">
+                            <i class="fas fa-tv text-2xl text-amaranth-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Basic Sound System</span>
+                            <span class="font-medium text-amaranth-500">From ₹5,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Premium Sound System</span>
+                            <span class="font-medium text-amaranth-500">From ₹12,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Projector & Screen</span>
+                            <span class="font-medium text-amaranth-500">From ₹5,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">LED Screens</span>
+                            <span class="font-medium text-amaranth-500">From ₹15,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Stage Lighting Setup</span>
+                            <span class="font-medium text-amaranth-500">From ₹10,000</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">
+                        Technical staff included with equipment rental.
+                    </p>
+                </div>
+                
+                <!-- Photography Service -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800">Photography Services</h3>
+                        <div class="w-16 h-16 rounded-full bg-amaranth-100 flex items-center justify-center">
+                            <i class="fas fa-camera text-2xl text-amaranth-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Event Photography (4 hours)</span>
+                            <span class="font-medium text-amaranth-500">From ₹15,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Event Photography (8 hours)</span>
+                            <span class="font-medium text-amaranth-500">From ₹25,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Videography Package</span>
+                            <span class="font-medium text-amaranth-500">From ₹20,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Photo & Video Combo</span>
+                            <span class="font-medium text-amaranth-500">From ₹35,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Drone Coverage</span>
+                            <span class="font-medium text-amaranth-500">From ₹10,000</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">
+                        All photography packages include digital delivery of edited photos.
+                    </p>
+                </div>
+                
+                <!-- Additional Services -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800">Additional Services</h3>
+                        <div class="w-16 h-16 rounded-full bg-amaranth-100 flex items-center justify-center">
+                            <i class="fas fa-plus-circle text-2xl text-amaranth-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Valet Parking Service</span>
+                            <span class="font-medium text-amaranth-500">From ₹5,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Security Personnel</span>
+                            <span class="font-medium text-amaranth-500">From ₹5,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Welcome Staff</span>
+                            <span class="font-medium text-amaranth-500">From ₹4,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Transportation Services</span>
+                            <span class="font-medium text-amaranth-500">Custom Quote</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Guest Accommodation</span>
+                            <span class="font-medium text-amaranth-500">Custom Quote</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">
+                        Please inquire for custom arrangements and special requests.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Terms Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Booking Terms & Policies
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our transparent booking process ensures a smooth experience from reservation to celebration.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-amaranth-500 text-white p-8">
+                        <h3 class="text-2xl font-serif font-semibold mb-6">Key Information</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-check text-gold mt-1 mr-3 text-lg"></i>
+                                <div>
+                                    <p class="font-medium mb-1">Business Hours</p>
+                                    <p class="text-sm opacity-90">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                    <p class="text-sm opacity-90">Sunday: Closed</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-money-check text-gold mt-1 mr-3 text-lg"></i>
+                                <div>
+                                    <p class="font-medium mb-1">Payment Structure</p>
+                                    <p class="text-sm opacity-90">25% advance at booking</p>
+                                    <p class="text-sm opacity-90">Balance due 7 days before event</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-file-invoice text-gold mt-1 mr-3 text-lg"></i>
+                                <div>
+                                    <p class="font-medium mb-1">Taxes</p>
+                                    <p class="text-sm opacity-90">GST applicable on all services</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt text-gold mt-1 mr-3 text-lg"></i>
+                                <div>
+                                    <p class="font-medium mb-1">Booking Assistance</p>
+                                    <p class="text-sm opacity-90">Contact: +91 [Phone Number]</p>
+                                    <p class="text-sm opacity-90">Email: info@shagunbanquet.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800 mb-6">Booking Terms</h3>
+                        <div class="space-y-6 text-gray-600">
+                            <div>
+                                <h4 class="font-medium text-amaranth-500 mb-2">Reservation Process</h4>
+                                <p>Bookings require a 25% advance payment to secure your date. The remaining balance is due seven days before your event. All payments are non-refundable but may be adjusted for rescheduling within a six-month period.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-amaranth-500 mb-2">Catering Policy</h4>
+                                <p>We maintain an in-house catering policy to ensure quality and consistency. Outside food vendors are not permitted. Our culinary team can accommodate special dietary requirements with advance notice.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-amaranth-500 mb-2">Decoration Guidelines</h4>
+                                <p>All decorations must be arranged through our panel-approved decorators. This ensures quality and compatibility with our venue's aesthetics while allowing for personalized themes.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-amaranth-500 mb-2">Alcohol Policy</h4>
+                                <p>If you wish to serve alcoholic beverages at your event, you must obtain the requisite liquor license in compliance with local regulations. Our team can provide guidance on this process.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-amaranth-500 mb-2">Timing & Extensions</h4>
+                                <p>Standard venue rental is for the duration specified in your package. Extensions may be available at an additional hourly rate, subject to availability and prior arrangement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Offers -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Seasonal Offers & Promotions
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Take advantage of our special seasonal packages and limited-time promotions.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Monsoon Special Offer -->
+                <div class="relative overflow-hidden rounded-xl shadow-lg group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 bg-amaranth-500 text-white px-4 py-1 z-10 rounded-bl-xl">
+                        15% Off
+                    </div>
+                    <div class="relative h-64">
+                        <img src="images/packages/monsoon-special.jpg" alt="Monsoon Special Package" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white z-10">
+                            <h3 class="text-2xl font-serif font-semibold mb-2">Monsoon Special</h3>
+                            <p class="opacity-90">Valid for events booked during July-September</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6">
+                        <p class="text-gray-600 mb-4">
+                            Enjoy 15% off on all wedding and social gathering packages during the monsoon season. This limited-time offer includes a complimentary welcome drink station and enhanced decoration package.
+                        </p>
+                        <p class="text-sm text-amaranth-500 font-medium mb-4">
+                            *Terms and conditions apply
+                        </p>
+                        <a href="contact.html" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                            Inquire Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Weekday Corporate Special -->
+                <div class="relative overflow-hidden rounded-xl shadow-lg group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 bg-gold text-white px-4 py-1 z-10 rounded-bl-xl">
+                        20% Off
+                    </div>
+                    <div class="relative h-64">
+                        <img src="images/packages/corporate-special.jpg" alt="Weekday Corporate Special" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white z-10">
+                            <h3 class="text-2xl font-serif font-semibold mb-2">Weekday Corporate Special</h3>
+                            <p class="opacity-90">Valid for events Monday-Thursday</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6">
+                        <p class="text-gray-600 mb-4">
+                            Book your corporate event on weekdays (Monday-Thursday) and receive 20% off on all corporate packages. This offer includes complimentary AV equipment and a dedicated event coordinator.
+                        </p>
+                        <p class="text-sm text-amaranth-500 font-medium mb-4">
+                            *Subject to availability, not valid on public holidays
+                        </p>
+                        <a href="contact.html" class="inline-block bg-gold hover:bg-gold-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                            Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calculator CTA -->
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/packages/calculator-bg.jpg');">
+        <div class="absolute inset-0 bg-gray-900 opacity-80"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-amaranth-500 p-8 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-calculator text-6xl text-gold mb-4"></i>
+                            <h3 class="text-2xl font-serif font-semibold mb-3">Event Budget Calculator</h3>
+                            <p class="opacity-90">
+                                Estimate the cost of your celebration with our interactive tool
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8">
+                        <h3 class="text-xl font-serif font-semibold text-gray-800 mb-4">Plan Your Budget</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our interactive event calculator helps you estimate costs based on your guest count, catering preferences, and service selections. Get a quick estimate before speaking with our event planners.
+                        </p>
+                        <a href="#calculator" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                            Try Our Calculator
+                        </a>
+                        <span class="inline-block text-gray-500 ml-4">or</span>
+                        <a href="contact.html" class="inline-block text-amaranth-500 hover:text-amaranth-600 font-medium ml-4 transition-colors">
+                            Contact Us for a Custom Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Find answers to common questions about our packages and booking process.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 focus:outline-none" data-toggle="faq-1">
+                        <h3 class="text-lg font-medium text-gray-800">How far in advance should I book my event?</h3>
+                        <svg class="w-5 h-5 text-amaranth-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-1" class="faq-content hidden px-5 pb-5">
+                        <p class="text-gray-600">
+                            We recommend booking at least 3-6 months in advance for weddings and large social events, especially for peak season dates (October-February). Corporate events typically require 1-3 months advance booking. However, we can occasionally accommodate last-minute bookings depending on availability.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 focus:outline-none" data-toggle="faq-2">
+                        <h3 class="text-lg font-medium text-gray-800">Can I bring my own decorations or hire an outside decorator?</h3>
+                        <svg class="w-5 h-5 text-amaranth-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-2" class="faq-content hidden px-5 pb-5">
+                        <p class="text-gray-600">
+                            We maintain a policy that all decorations must be arranged through our panel-approved decorators. This ensures quality standards and compliance with our venue guidelines. However, our decorators are happy to work with your ideas and themes to create a personalized look.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 focus:outline-none" data-toggle="faq-3">
+                        <h3 class="text-lg font-medium text-gray-800">Is the 25% advance payment refundable if I cancel my event?</h3>
+                        <svg class="w-5 h-5 text-amaranth-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-3" class="faq-content hidden px-5 pb-5">
+                        <p class="text-gray-600">
+                            The advance payment is non-refundable in case of cancellation. However, it is adjustable for rescheduling your event within a six-month period. This policy helps us manage our booking calendar efficiently while still offering flexibility to our clients.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 focus:outline-none" data-toggle="faq-4">
+                        <h3 class="text-lg font-medium text-gray-800">Can you accommodate special dietary requirements?</h3>
+                        <svg class="w-5 h-5 text-amaranth-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-4" class="faq-content hidden px-5 pb-5">
+                        <p class="text-gray-600">
+                            Yes, our culinary team can accommodate various dietary requirements including vegetarian, Jain, vegan, gluten-free, and allergy-specific meals. Please inform us about any special dietary needs at least two weeks before your event so we can prepare accordingly.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 focus:outline-none" data-toggle="faq-5">
+                        <h3 class="text-lg font-medium text-gray-800">Can I customize the packages to match my specific requirements?</h3>
+                        <svg class="w-5 h-5 text-amaranth-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-5" class="faq-content hidden px-5 pb-5">
+                        <p class="text-gray-600">
+                            Absolutely! Our packages serve as starting points, but we're happy to customize them according to your specific needs. Our event planners can work with you to add or remove services, adjust guest counts, and create a tailored package that perfectly matches your vision and budget.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 focus:outline-none" data-toggle="faq-6">
+                        <h3 class="text-lg font-medium text-gray-800">Is there a minimum guest count requirement?</h3>
+                        <svg class="w-5 h-5 text-amaranth-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-6" class="faq-content hidden px-5 pb-5">
+                        <p class="text-gray-600">
+                            Yes, each of our venue spaces has minimum guest count requirements to ensure optimal use of the space. Our main hall requires a minimum of 150 guests, while our more intimate spaces can accommodate smaller gatherings. Please contact our team for specific requirements based on your preferred date and venue space.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <p class="text-gray-600 mb-4">
+                    Have another question not answered here?
+                </p>
+                <a href="contact.html" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/packages/cta-background.jpg');">
+        <div class="absolute inset-0 bg-amaranth-500 opacity-90"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">
+                    Ready to Plan Your Special Event?
+                </h2>
+                <p class="text-xl opacity-90 mb-10">
+                    Let our experienced team help you create a memorable celebration. Contact us today to discuss your requirements and book your preferred date.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="contact.html" class="inline-block bg-white text-amaranth-500 hover:bg-gold hover:text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                        Book a Consultation
+                    </a>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt mr-3 text-gold"></i>
+                        <span class="text-xl">+91 [Phone Number]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Contact Information -->
+                <div>
+                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Creating memorable celebrations with elegance and sophistication.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-300">105, Bijay Krishna Street, Near Telephone Exchange, Kotrung, Uttarpara, West Bengal</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-gold mr-3"></i>
+                            <p class="text-gray-300">+91 [Phone Number]</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-3"></i>
+                            <p class="text-gray-300">info@shagunbanquet.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="venues.html" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
+                        <li><a href="packages.html" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Business Hours</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Monday - Saturday</span>
+                            <span class="text-gold">9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Sunday</span>
+                            <span class="text-gold">Closed</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Subscribe to Updates</h3>
+                    <p class="text-gray-300 mb-4">
+                        Stay informed about our latest offers and packages.
+                    </p>
+                    <form class="space-y-3">
+                        <div>
+                            <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        <button type="submit" class="bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Shagun Banquet Hall. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                }
+            });
+            
+            // Tab Functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Hide all tab content
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId + '-tab').classList.add('active');
+                });
+            });
+            
+            // FAQ Functionality
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const contentId = this.getAttribute('data-toggle');
+                    const content = document.getElementById(contentId);
+                    const icon = this.querySelector('svg');
+                    
+                    // Toggle content visibility
+                    content.classList.toggle('hidden');
+                    
+                    // Toggle icon rotation
+                    if (content.classList.contains('hidden')) {
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

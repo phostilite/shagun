@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shagun Banquet Hall</title>
+    <meta name="description" content="Get in touch with Shagun Banquet Hall in Uttarpara for event bookings, inquiries, and consultations. Visit our venue near Uttarpara Telephone Exchange or contact us directly.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amaranth': {
+                            DEFAULT: '#a14258',
+                            100: '#210d12',
+                            200: '#411b24',
+                            300: '#622835',
+                            400: '#823547',
+                            500: '#a14258',
+                            600: '#be6076',
+                            700: '#ce8898',
+                            800: '#deafba',
+                            900: '#efd7dd'
+                        },
+                        'gold': {
+                            DEFAULT: '#d4af37',
+                            100: '#2c2409',
+                            200: '#584713',
+                            300: '#836b1c',
+                            400: '#af8f25',
+                            500: '#d4af37',
+                            600: '#ddbf5d',
+                            700: '#e5cf86',
+                            800: '#eedfae',
+                            900: '#f6efd7'
+                        },
+                        'silver': {
+                            DEFAULT: '#c0c0c0',
+                            100: '#262626',
+                            200: '#4d4d4d',
+                            300: '#737373',
+                            400: '#999999',
+                            500: '#c0c0c0',
+                            600: '#cccccc',
+                            700: '#d9d9d9',
+                            800: '#e6e6e6',
+                            900: '#f2f2f2'
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styling beyond Tailwind */
+
+        .page-banner {
+            height: 60vh;
+            min-height: 400px;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .gold-underline {
+            position: relative;
+        }
+        
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #d4af37;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .contact-info-card:hover .icon-circle {
+            background-color: #a14258;
+            color: white;
+        }
+        
+        .form-input:focus {
+            border-color: #a14258;
+            box-shadow: 0 0 0 3px rgba(161, 66, 88, 0.2);
+        }
+        
+        /* Tab styling for booking process */
+        .tab-active {
+            background-color: #a14258;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Contact Button -->
+            <a href="contact.html" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+                Book Now
+            </a>
+        </div>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Contact</a>
+                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                    Book Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Section -->
+    <section class="page-banner relative overflow-hidden pt-24">
+        <div class="bg-cover bg-center h-full" style="background-image: url('images/contact/contact-banner.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <div class="text-center text-white z-10 py-20" data-aos="fade-up">
+                    <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
+                        Contact Us
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-shadow max-w-3xl mx-auto">
+                        Get in touch with our event specialists to begin planning your perfect celebration at Shagun Banquet Hall.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-600 hover:text-amaranth-500 text-sm">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-800 ml-1 text-sm font-medium">Contact Us</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Address Card -->
+                <div class="contact-info-card bg-white p-8 rounded-xl shadow-md text-center transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-circle inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6 transition-colors duration-300">
+                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Our Location</h3>
+                    <p class="text-gray-600">
+                        105, Bijay Krishna Street,<br>
+                        Near Telephone Exchange,<br>
+                        Kotrung, Uttarpara,<br>
+                        West Bengal
+                    </p>
+                    <a href="#location-map" class="inline-block mt-6 text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                        View on Map
+                    </a>
+                </div>
+                
+                <!-- Contact Details Card -->
+                <div class="contact-info-card bg-white p-8 rounded-xl shadow-md text-center transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-circle inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6 transition-colors duration-300">
+                        <i class="fas fa-phone-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Contact Details</h3>
+                    <p class="text-gray-600 mb-3">
+                        <strong>Phone:</strong><br>
+                        +91 [Phone Number]
+                    </p>
+                    <p class="text-gray-600">
+                        <strong>Email:</strong><br>
+                        info@shagunbanquet.com
+                    </p>
+                    <a href="tel:+91XXXXXXXX" class="inline-block mt-6 text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                        Call Now
+                    </a>
+                </div>
+                
+                <!-- Business Hours Card -->
+                <div class="contact-info-card bg-white p-8 rounded-xl shadow-md text-center transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-circle inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6 transition-colors duration-300">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Business Hours</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex justify-between">
+                            <span>Monday - Saturday:</span>
+                            <span class="font-medium">9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span class="font-medium">Closed</span>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-gray-600 text-sm">
+                        Our team is available during business hours for venue visits and consultations.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Directions Section -->
+    <section class="py-16 bg-gray-50" id="location-map">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Location & Directions
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Conveniently located near Uttarpara Telephone Exchange, our venue is easily accessible from nearby cities and towns.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Map -->
+                <div class="lg:col-span-2 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
+                    <div class="bg-gray-200 w-full h-96">
+                        <!-- Replace with actual Google Maps iframe -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.1675089135183!2d88.34946707582547!3d22.721234230394897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d7d4f6c3d91%3A0xa8b95891d0d74682!2sUttarpara%20Telephone%20Exchange!5e0!3m2!1sen!2sin!4v1715282381411!5m2!1sen!2sin" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <!-- Directions -->
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-serif font-semibold mb-6 text-gray-800">
+                        How to Reach Us
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <!-- By Car -->
+                        <div>
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-car text-amaranth-500 mr-3"></i>
+                                <h4 class="text-lg font-medium text-gray-800">By Car</h4>
+                            </div>
+                            <p class="text-gray-600 pl-8">
+                                Located on Bijay Krishna Street, near the Uttarpara Telephone Exchange. 
+                                Private parking available for 22 vehicles.
+                            </p>
+                        </div>
+                        
+                        <!-- By Train -->
+                        <div>
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-train text-amaranth-500 mr-3"></i>
+                                <h4 class="text-lg font-medium text-gray-800">By Train</h4>
+                            </div>
+                            <p class="text-gray-600 pl-8">
+                                Uttarpara Railway Station is located within 2 km from our venue. 
+                                Auto-rickshaws and taxis are available at the station.
+                            </p>
+                        </div>
+                        
+                        <!-- By Bus -->
+                        <div>
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-bus text-amaranth-500 mr-3"></i>
+                                <h4 class="text-lg font-medium text-gray-800">By Bus</h4>
+                            </div>
+                            <p class="text-gray-600 pl-8">
+                                Multiple bus routes pass through Uttarpara. 
+                                Alight at Uttarpara Telephone Exchange bus stop.
+                            </p>
+                        </div>
+                        
+                        <!-- From Nearby Cities -->
+                        <div>
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-map text-amaranth-500 mr-3"></i>
+                                <h4 class="text-lg font-medium text-gray-800">From Nearby Cities</h4>
+                            </div>
+                            <p class="text-gray-600 pl-8">
+                                Located approximately 15 km from Kolkata city center.
+                                Well-connected by road and rail networks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Forms Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Get in Touch
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Whether you have a question about our services or you're ready to plan your event, we're here to help.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- General Inquiry Form -->
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
+                    <h3 class="text-2xl font-serif font-medium mb-6 text-gray-800">
+                        General Inquiry
+                    </h3>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="4" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Booking Request Form -->
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-serif font-medium mb-6 text-gray-800">
+                        Booking Request
+                    </h3>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="booking-name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="booking-name" name="booking-name" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="booking-email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="booking-email" name="booking-email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="booking-phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="booking-phone" name="booking-phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="event-date" class="block text-gray-700 mb-2">Event Date</label>
+                                <input type="date" id="event-date" name="event-date" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="event-time" class="block text-gray-700 mb-2">Event Time</label>
+                                <input type="time" id="event-time" name="event-time" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="event-type" class="block text-gray-700 mb-2">Event Type</label>
+                                <select id="event-type" name="event-type" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                                    <option value="">Select Event Type</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Reception">Reception</option>
+                                    <option value="Engagement">Engagement</option>
+                                    <option value="Birthday">Birthday</option>
+                                    <option value="Corporate">Corporate Event</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="guest-count" class="block text-gray-700 mb-2">Expected Guests</label>
+                                <input type="number" id="guest-count" name="guest-count" min="50" max="500" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="event-requirements" class="block text-gray-700 mb-2">Special Requirements</label>
+                            <textarea id="event-requirements" name="event-requirements" rows="4" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none transition-colors"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-gold hover:bg-gold-600 text-white font-medium py-3 px-8 rounded-lg transition-colors">
+                            Submit Booking Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Process Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Booking Process
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Learn about our straightforward booking process to secure your perfect event date at Shagun Banquet Hall.
+                </p>
+            </div>
+            
+            <!-- Booking Process Steps Tabs -->
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <!-- Tab Navigation -->
+                <div class="flex flex-wrap border-b border-gray-200 mb-8">
+                    <button class="tab-btn tab-active py-3 px-6 font-medium text-center transition-colors" data-tab="1">
+                        Initial Inquiry
+                    </button>
+                    <button class="tab-btn py-3 px-6 font-medium text-center text-gray-600 hover:text-amaranth-500 transition-colors" data-tab="2">
+                        Venue Visit
+                    </button>
+                    <button class="tab-btn py-3 px-6 font-medium text-center text-gray-600 hover:text-amaranth-500 transition-colors" data-tab="3">
+                        Booking Confirmation
+                    </button>
+                    <button class="tab-btn py-3 px-6 font-medium text-center text-gray-600 hover:text-amaranth-500 transition-colors" data-tab="4">
+                        Event Planning
+                    </button>
+                    <button class="tab-btn py-3 px-6 font-medium text-center text-gray-600 hover:text-amaranth-500 transition-colors" data-tab="5">
+                        Final Payment
+                    </button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="tab-content active p-6 bg-white rounded-xl shadow-md" id="tab-1">
+                    <div class="flex flex-col md:flex-row items-start">
+                        <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                            <div class="w-20 h-20 rounded-full bg-amaranth-100 flex items-center justify-center">
+                                <span class="text-3xl font-serif font-bold text-amaranth-500">1</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Initial Inquiry</h3>
+                            <p class="text-gray-600 mb-4">
+                                Begin by submitting an inquiry through our booking form, calling us directly, or visiting our venue during business hours. Our team will check availability for your preferred date and provide initial information about our packages and services.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Provide event date, type, and approximate guest count</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Review initial availability and options</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Receive preliminary pricing information</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content p-6 bg-white rounded-xl shadow-md hidden" id="tab-2">
+                    <div class="flex flex-col md:flex-row items-start">
+                        <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                            <div class="w-20 h-20 rounded-full bg-amaranth-100 flex items-center justify-center">
+                                <span class="text-3xl font-serif font-bold text-amaranth-500">2</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Venue Visit</h3>
+                            <p class="text-gray-600 mb-4">
+                                Schedule a visit to our banquet hall to see our spaces in person. Our event coordinator will guide you through the venue, discuss your event requirements in detail, and answer any questions you may have.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Tour our main banquet hall and additional spaces</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Discuss your vision and specific requirements</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Explore catering menus and decoration options</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content p-6 bg-white rounded-xl shadow-md hidden" id="tab-3">
+                    <div class="flex flex-col md:flex-row items-start">
+                        <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                            <div class="w-20 h-20 rounded-full bg-amaranth-100 flex items-center justify-center">
+                                <span class="text-3xl font-serif font-bold text-amaranth-500">3</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Booking Confirmation</h3>
+                            <p class="text-gray-600 mb-4">
+                                Once you've decided to reserve your date, we require a 25% advance payment to secure your booking. This payment is non-refundable but can be adjusted within a six-month period for any occasion if your plans change.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Submit 25% advance payment to secure your date</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Receive booking confirmation and receipt</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Sign event agreement outlining all terms and services</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content p-6 bg-white rounded-xl shadow-md hidden" id="tab-4">
+                    <div class="flex flex-col md:flex-row items-start">
+                        <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                            <div class="w-20 h-20 rounded-full bg-amaranth-100 flex items-center justify-center">
+                                <span class="text-3xl font-serif font-bold text-amaranth-500">4</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Event Planning</h3>
+                            <p class="text-gray-600 mb-4">
+                                Our experienced team will work with you to plan all aspects of your event. From menu selection to decoration themes, we'll ensure everything is tailored to your preferences. Planning meetings can be scheduled at your convenience.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Finalize menu selections and food requirements</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Choose decoration themes and layouts</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Discuss entertainment and technical requirements</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Coordinate with our panel-approved vendors</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content p-6 bg-white rounded-xl shadow-md hidden" id="tab-5">
+                    <div class="flex flex-col md:flex-row items-start">
+                        <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                            <div class="w-20 h-20 rounded-full bg-amaranth-100 flex items-center justify-center">
+                                <span class="text-3xl font-serif font-bold text-amaranth-500">5</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Final Payment</h3>
+                            <p class="text-gray-600 mb-4">
+                                The remaining balance payment is due seven days before your scheduled event date. This allows us adequate time for final preparations to ensure your event runs smoothly. All charges are subject to GST as per Indian regulations.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Complete remaining payment (including GST)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Confirm final guest count and arrangements</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Receive detailed event execution plan</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                                    <span>Relax and look forward to your special day!</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Find answers to common questions about booking and hosting events at Shagun Banquet Hall.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <!-- FAQ Items -->
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-btn flex items-center justify-between w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors">
+                            <span class="font-medium text-gray-800">How far in advance should I book the venue?</span>
+                            <i class="fas fa-chevron-down text-amaranth-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 bg-white">
+                            <p class="text-gray-600">
+                                We recommend booking our venue at least 3-6 months in advance, especially for weekend dates and peak wedding seasons (October-February). For special dates or holiday periods, booking 6-12 months ahead is advisable to ensure availability.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-btn flex items-center justify-between w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors">
+                            <span class="font-medium text-gray-800">Can we bring our own food or decorations?</span>
+                            <i class="fas fa-chevron-down text-amaranth-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 bg-white">
+                            <p class="text-gray-600">
+                                We maintain a strict in-house catering policy and do not permit outside food vendors to ensure consistent quality control. Similarly, for decorations, we work exclusively with our panel-approved decorators starting at Rs. 20,000. This ensures high standards and aesthetic alignment with our venue.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-btn flex items-center justify-between w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors">
+                            <span class="font-medium text-gray-800">What is your cancellation policy?</span>
+                            <i class="fas fa-chevron-down text-amaranth-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 bg-white">
+                            <p class="text-gray-600">
+                                The 25% advance payment is non-refundable, but it can be adjusted within a six-month period for any occasion if your plans change. Please note that any additional payments made are subject to our cancellation terms outlined in the booking agreement.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-btn flex items-center justify-between w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors">
+                            <span class="font-medium text-gray-800">Can you accommodate special dietary requirements?</span>
+                            <i class="fas fa-chevron-down text-amaranth-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 bg-white">
+                            <p class="text-gray-600">
+                                Yes, our culinary team is experienced in accommodating various dietary requirements, including vegetarian, vegan, gluten-free, and allergy-specific needs. Please discuss your specific requirements during the menu planning phase, and we'll ensure appropriate options are available.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-btn flex items-center justify-between w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors">
+                            <span class="font-medium text-gray-800">Is alcohol service available?</span>
+                            <i class="fas fa-chevron-down text-amaranth-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 bg-white">
+                            <p class="text-gray-600">
+                                Yes, we can accommodate alcohol service at your event. However, clients must obtain the requisite liquor license in compliance with local regulations. Our team can provide guidance on this process, but the responsibility for obtaining the license rests with the client.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-btn flex items-center justify-between w-full p-5 text-left bg-white hover:bg-gray-50 transition-colors">
+                            <span class="font-medium text-gray-800">Do you provide parking facilities?</span>
+                            <i class="fas fa-chevron-down text-amaranth-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 bg-white">
+                            <p class="text-gray-600">
+                                Yes, we provide private parking space for 22 vehicles. For larger events, we can arrange additional parking solutions nearby. Please inform us in advance if you expect a high number of guests arriving by car so we can make appropriate arrangements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More Questions CTA -->
+                <div class="text-center mt-12">
+                    <p class="text-gray-600 mb-4">
+                        Still have questions? We're here to help!
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                        <a href="tel:+91XXXXXXXX" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            Call Us
+                        </a>
+                        <a href="mailto:info@shagunbanquet.com" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Email Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/contact/cta-background.jpg');">
+        <div class="absolute inset-0 bg-amaranth-500 opacity-90"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">
+                    Ready to Create Unforgettable Memories?
+                </h2>
+                <p class="text-xl opacity-90 mb-10">
+                    Let's begin planning your perfect celebration at Shagun Banquet Hall. Contact us today to discuss your vision.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="#" class="inline-block bg-white text-amaranth-500 hover:bg-gold hover:text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                        Book Your Date
+                    </a>
+                    <a href="tel:+91XXXXXXXX" class="inline-flex items-center text-white hover:text-gold transition-colors text-lg">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        +91 [Phone Number]
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Contact Information -->
+                <div>
+                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Creating memorable celebrations with elegance and sophistication.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-300">105, Bijay Krishna Street, Near Telephone Exchange, Kotrung, Uttarpara, West Bengal</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-gold mr-3"></i>
+                            <p class="text-gray-300">+91 [Phone Number]</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-3"></i>
+                            <p class="text-gray-300">info@shagunbanquet.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="venues.html" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
+                        <li><a href="packages.html" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Business Hours</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Monday - Saturday</span>
+                            <span class="text-gold">9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Sunday</span>
+                            <span class="text-gold">Closed</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Subscribe to Updates</h3>
+                    <p class="text-gray-300 mb-4">
+                        Stay informed about our latest offers and packages.
+                    </p>
+                    <form class="space-y-3">
+                        <div>
+                            <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        <button type="submit" class="bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Shagun Banquet Hall. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                }
+            });
+            
+            // Booking Process Tabs
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('text-gray-600');
+                    });
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        content.classList.add('hidden');
+                    });
+                    
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('tab-active');
+                    button.classList.remove('text-gray-600');
+                    const tabId = button.getAttribute('data-tab');
+                    const activeContent = document.getElementById(`tab-${tabId}`);
+                    activeContent.classList.add('active');
+                    activeContent.classList.remove('hidden');
+                });
+            });
+            
+            // FAQ Accordion
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('.fa-chevron-down');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('hidden');
+                    
+                    // Rotate icon
+                    if (answer.classList.contains('hidden')) {
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

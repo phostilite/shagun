@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Shagun Banquet Hall</title>
+    <meta name="description" content="Discover our comprehensive event services at Shagun Banquet Hall in Uttarpara. From exquisite catering to elegant décor, we handle every detail of your celebration.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amaranth': {
+                            DEFAULT: '#a14258',
+                            100: '#210d12',
+                            200: '#411b24',
+                            300: '#622835',
+                            400: '#823547',
+                            500: '#a14258',
+                            600: '#be6076',
+                            700: '#ce8898',
+                            800: '#deafba',
+                            900: '#efd7dd'
+                        },
+                        'gold': {
+                            DEFAULT: '#d4af37',
+                            100: '#2c2409',
+                            200: '#584713',
+                            300: '#836b1c',
+                            400: '#af8f25',
+                            500: '#d4af37',
+                            600: '#ddbf5d',
+                            700: '#e5cf86',
+                            800: '#eedfae',
+                            900: '#f6efd7'
+                        },
+                        'silver': {
+                            DEFAULT: '#c0c0c0',
+                            100: '#262626',
+                            200: '#4d4d4d',
+                            300: '#737373',
+                            400: '#999999',
+                            500: '#c0c0c0',
+                            600: '#cccccc',
+                            700: '#d9d9d9',
+                            800: '#e6e6e6',
+                            900: '#f2f2f2'
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styling beyond Tailwind */
+        .page-header {
+            height: 60vh;
+            min-height: 400px;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .gold-underline {
+            position: relative;
+        }
+        
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #d4af37;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-open .accordion-content {
+            max-height: 1000px;
+        }
+        
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-open .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Contact Button -->
+            <a href="contact.html" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+                Book Now
+            </a>
+        </div>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                    Book Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header relative pt-24">
+        <div class="bg-cover bg-center h-full" style="background-image: url('images/services/services-header.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <div class="text-center text-white z-10 py-20" data-aos="fade-up">
+                    <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
+                        Our Premium Services
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-shadow max-w-3xl mx-auto">
+                        Comprehensive event solutions tailored to create your perfect celebration
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-600 hover:text-amaranth-500 text-sm">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-800 ml-1 text-sm font-medium">Services</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Services Introduction -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    End-to-End Event Excellence
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    At Shagun Banquet Hall, we provide comprehensive event hosting services that cover every aspect of your special occasion. Our dedicated team handles all elements from conceptualization to execution, ensuring a seamless and memorable experience for you and your guests.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-right">
+                    <img src="images/services/event-planning.jpg" alt="Event Planning at Shagun Banquet Hall" class="w-full h-auto">
+                </div>
+                
+                <!-- Content -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl md:text-3xl font-serif font-semibold text-gray-800 mb-6">
+                        Event Planning & Management
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our experienced team of event planners works directly with you throughout the planning process, ensuring personalized attention to your specific needs. We handle every detail, from initial concept to final execution, alleviating the planning burden and ensuring a stress-free experience.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Personalized event consultation and concept development</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Detailed event timeline and coordination</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Vendor management and coordination</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">On-site event supervision and troubleshooting</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Cultural and religious customs accommodation</p>
+                        </li>
+                    </ul>
+                    <p class="text-gold font-medium mt-6">
+                        Complimentary with venue booking
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Content -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl md:text-3xl font-serif font-semibold text-gray-800 mb-6">
+                        Exquisite Catering
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our in-house culinary team prepares a wide range of delectable dishes using fresh, high-quality ingredients. We maintain a strict in-house catering policy to ensure consistent quality control over all meals served at your event. Our menus can be tailored to accommodate your guests' dietary requirements and preferences.
+                    </p>
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Vegetarian Menu</span>
+                            <span class="text-gold font-medium">Starting from ₹900 per plate</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-medium">Non-Vegetarian Menu</span>
+                            <span class="text-gold font-medium">Starting from ₹1,000 per plate</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Wide variety of regional and international cuisines</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Customizable menu options to suit your preferences</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Special dietary accommodations (vegan, gluten-free, etc.)</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Elegant table settings and professional service staff</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Buffet, plated, and family-style service options</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-left">
+                    <img src="images/services/catering-service.jpg" alt="Catering Services at Shagun Banquet Hall" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decoration Services -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-right">
+                    <img src="images/services/decoration-service.jpg" alt="Decoration Services at Shagun Banquet Hall" class="w-full h-auto">
+                </div>
+                
+                <!-- Content -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl md:text-3xl font-serif font-semibold text-gray-800 mb-6">
+                        Elegant Décor & Ambiance
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Transform our spaces with exquisite decorations tailored to your vision and theme. Our decoration team works closely with you to create memorable visual experiences through thoughtful arrangement of colors, textures, and thematic elements. We handle all aspects of ambiance creation to ensure your event space looks stunning.
+                    </p>
+                    <p class="text-gold font-medium mb-6">
+                        Decoration packages starting from ₹20,000
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Custom theme development and execution</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Elegant floral arrangements and centerpieces</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Specialized lighting design to enhance ambiance</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Entrance and stage décor customization</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Table settings and linens coordination</p>
+                        </li>
+                    </ul>
+                    <p class="text-gray-500 italic mt-6 text-sm">
+                        Note: Shagun Banquet Hall policy requires the use of our panel-approved decorators only.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entertainment Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Content -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl md:text-3xl font-serif font-semibold text-gray-800 mb-6">
+                        Entertainment & Technical Support
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Keep your guests entertained with our professional DJ services and state-of-the-art audio-visual systems. Our technical capabilities support various event requirements, from music performances to business presentations, ensuring your event flows smoothly from start to finish.
+                    </p>
+                    <p class="text-gold font-medium mb-6">
+                        DJ services starting from ₹8,000
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Professional DJ services with extensive music library</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">High-quality sound systems for crystal-clear audio</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Advanced lighting effects to enhance the atmosphere</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Projection systems for presentations and slideshows</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-600">Technical staff for equipment operation and troubleshooting</p>
+                        </li>
+                    </ul>
+                    <p class="text-gray-500 italic mt-6 text-sm">
+                        Note: Clients wishing to include alcoholic beverages must obtain the requisite liquor license.
+                    </p>
+                </div>
+                
+                <!-- Image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-left">
+                    <img src="images/services/entertainment-service.jpg" alt="Entertainment Services at Shagun Banquet Hall" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Complementary Services
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Beyond our core offerings, we provide additional services to enhance your event experience and ensure every detail is perfectly coordinated.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Photography Assistance -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6">
+                        <i class="fas fa-camera text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Photography Assistance</h3>
+                    <p class="text-gray-600 mb-4">
+                        We can recommend trusted photography professionals who are familiar with our venue's best spots and lighting conditions. Our staff coordinates with photographers to ensure they capture your special moments perfectly.
+                    </p>
+                </div>
+                
+                <!-- Transportation Coordination -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6">
+                        <i class="fas fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Transportation Coordination</h3>
+                    <p class="text-gray-600 mb-4">
+                        We provide assistance with transportation arrangements for you and your guests, including valet services and coordination with local transportation providers to ensure smooth arrivals and departures.
+                    </p>
+                </div>
+                
+                <!-- Accommodation Recommendations -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amaranth-100 text-amaranth-500 mb-6">
+                        <i class="fas fa-hotel text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">Accommodation Recommendations</h3>
+                    <p class="text-gray-600 mb-4">
+                        For events with out-of-town guests, we can suggest nearby accommodations and help coordinate group bookings at preferred rates with our partner hotels in the Uttarpara region.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Types Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Specialized Event Expertise
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Our team has extensive experience handling a variety of events, each with their unique requirements and cultural nuances. We pride ourselves on delivering exceptional experiences across all celebration types.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Wedding Ceremonies -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/services/wedding-ceremony.jpg" alt="Wedding Ceremony at Shagun Banquet Hall" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Wedding Ceremonies</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            From traditional ceremonies to modern celebrations, we handle all aspects of wedding events with cultural sensitivity and meticulous attention to detail.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Pre-wedding functions</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Traditional ceremonies</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Grand receptions</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Corporate Events -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/services/corporate-event.jpg" alt="Corporate Event at Shagun Banquet Hall" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Corporate Events</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Our professional environment and technical capabilities make us ideal for business functions that require both sophistication and functionality.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Conferences and seminars</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Product launches</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Award ceremonies</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Social Gatherings -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/services/social-gathering.jpg" alt="Social Gathering at Shagun Banquet Hall" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Social Gatherings</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Celebrate life's special moments in an elegant setting with personalized touches that make your occasion truly special.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Birthday celebrations</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Anniversary parties</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Family reunions</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Cultural Events -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/services/cultural-event.jpg" alt="Cultural Event at Shagun Banquet Hall" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Cultural Events</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Our versatile spaces provide the perfect backdrop for cultural performances, religious ceremonies, and community gatherings.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Religious ceremonies</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Cultural performances</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gold text-xs mt-1.5 mr-2"></i>
+                                <p class="text-gray-600">Festival celebrations</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service FAQ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Find answers to common questions about our services and policies.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-200 py-6 accordion">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-medium text-gray-800">Can we bring our own caterer?</h3>
+                        <svg class="w-6 h-6 text-amaranth-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content mt-3">
+                        <p class="text-gray-600">
+                            No, Shagun Banquet Hall maintains a strict in-house catering policy to ensure consistent quality control over all meals served at events. Our experienced culinary team offers a wide range of customizable menu options to accommodate different tastes and dietary requirements.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-200 py-6 accordion">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-medium text-gray-800">Are outside decorators allowed?</h3>
+                        <svg class="w-6 h-6 text-amaranth-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content mt-3">
+                        <p class="text-gray-600">
+                            We require clients to use our panel-approved decorators only. This policy ensures consistency in quality and aesthetic alignment with our venue's overall ambiance while still allowing for personalized thematic elements that reflect your preferences.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-gray-200 py-6 accordion">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-medium text-gray-800">Can we serve alcohol at our event?</h3>
+                        <svg class="w-6 h-6 text-amaranth-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content mt-3">
+                        <p class="text-gray-600">
+                            Yes, we accommodate requests for serving alcoholic beverages with the stipulation that customers must obtain the requisite liquor license, complying with local regulations. Our event planning team can provide guidance on this process.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border-b border-gray-200 py-6 accordion">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-medium text-gray-800">What is included in the basic venue rental?</h3>
+                        <svg class="w-6 h-6 text-amaranth-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content mt-3">
+                        <p class="text-gray-600">
+                            Our basic venue rental includes the event space, basic lighting, air conditioning, tables and chairs, clean restroom facilities, parking for up to 22 vehicles, two complimentary preparation rooms, and basic event coordination. Catering, specialized decoration, and entertainment services are available at additional costs.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="border-b border-gray-200 py-6 accordion">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-medium text-gray-800">How far in advance should we book?</h3>
+                        <svg class="w-6 h-6 text-amaranth-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content mt-3">
+                        <p class="text-gray-600">
+                            For wedding events and peak season dates (October-February), we recommend booking 6-12 months in advance. For corporate events and social gatherings, 3-6 months advance booking is typically sufficient. However, we occasionally have last-minute availability, so please inquire regardless of your timeline.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="border-b border-gray-200 py-6 accordion">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-medium text-gray-800">What is your payment and cancellation policy?</h3>
+                        <svg class="w-6 h-6 text-amaranth-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content mt-3">
+                        <p class="text-gray-600">
+                            We require a 25% advance payment at the time of booking, with the remaining balance due seven days before the scheduled event. While payments are non-refundable, they are adjustable within a six-month period for any occasion, offering flexibility in case of unforeseen circumstances. GST is applied to all transactions in compliance with Indian tax regulations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/services/service-cta-background.jpg');">
+        <div class="absolute inset-0 bg-amaranth-500 opacity-90"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">
+                    Ready to Create Your Perfect Event?
+                </h2>
+                <p class="text-xl opacity-90 mb-10">
+                    Contact our event specialists to discuss your vision and let us bring it to life with our premium services.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="contact.html" class="inline-block bg-white text-amaranth-500 hover:bg-gold hover:text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                        Request a Custom Quote
+                    </a>
+                    <a href="packages.html" class="inline-block bg-transparent hover:bg-white text-white hover:text-amaranth-500 font-medium py-3 px-8 border border-white rounded-full transition-colors text-lg">
+                        View Packages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Contact Information -->
+                <div>
+                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Creating memorable celebrations with elegance and sophistication.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-300">105, Bijay Krishna Street, Near Telephone Exchange, Kotrung, Uttarpara, West Bengal</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-gold mr-3"></i>
+                            <p class="text-gray-300">+91 [Phone Number]</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-3"></i>
+                            <p class="text-gray-300">info@shagunbanquet.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="venues.html" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
+                        <li><a href="packages.html" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Business Hours</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Monday - Saturday</span>
+                            <span class="text-gold">9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Sunday</span>
+                            <span class="text-gold">Closed</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Subscribe to Updates</h3>
+                    <p class="text-gray-300 mb-4">
+                        Stay informed about our latest offers and packages.
+                    </p>
+                    <form class="space-y-3">
+                        <div>
+                            <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        <button type="submit" class="bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Shagun Banquet Hall. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                }
+            });
+            
+            // FAQ Accordion
+            const accordions = document.querySelectorAll('.accordion');
+            
+            accordions.forEach(accordion => {
+                const button = accordion.querySelector('button');
+                
+                button.addEventListener('click', () => {
+                    accordion.classList.toggle('accordion-open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

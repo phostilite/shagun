@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Shagun Banquet Hall - Our Story, Values & Team</title>
+    <meta name="description" content="Learn about Shagun Banquet Hall's journey to becoming Uttarpara's premier event venue, our dedicated team, and our commitment to excellence and sustainability.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amaranth': {
+                            DEFAULT: '#a14258',
+                            100: '#210d12',
+                            200: '#411b24',
+                            300: '#622835',
+                            400: '#823547',
+                            500: '#a14258',
+                            600: '#be6076',
+                            700: '#ce8898',
+                            800: '#deafba',
+                            900: '#efd7dd'
+                        },
+                        'gold': {
+                            DEFAULT: '#d4af37',
+                            100: '#2c2409',
+                            200: '#584713',
+                            300: '#836b1c',
+                            400: '#af8f25',
+                            500: '#d4af37',
+                            600: '#ddbf5d',
+                            700: '#e5cf86',
+                            800: '#eedfae',
+                            900: '#f6efd7'
+                        },
+                        'silver': {
+                            DEFAULT: '#c0c0c0',
+                            100: '#262626',
+                            200: '#4d4d4d',
+                            300: '#737373',
+                            400: '#999999',
+                            500: '#c0c0c0',
+                            600: '#cccccc',
+                            700: '#d9d9d9',
+                            800: '#e6e6e6',
+                            900: '#f2f2f2'
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        .gold-underline {
+            position: relative;
+        }
+        
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #d4af37;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #d4af37;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-marker {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #d4af37;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 30px;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+            }
+        }
+        
+        .team-member:hover .member-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Header/Navigation - Same as homepage -->
+    <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Contact Button -->
+            <a href="contact.html" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+                Book Now
+            </a>
+        </div>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
+                <a href="about.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">About Us</a>
+                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                    Book Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content starts here -->
+
+    <!-- Hero Section -->
+    <section class="pt-24 relative bg-cover bg-center" style="background-image: url('images/about/about-hero.jpg'); height: 60vh;">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="text-center text-white z-10 max-w-3xl" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-serif font-semibold mb-6">
+                    Our Story
+                </h1>
+                <p class="text-xl md:text-2xl">
+                    Creating Elegant Celebrations Since [Founding Year]
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-600 hover:text-amaranth-500 text-sm">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-800 ml-1 text-sm font-medium">About Us</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Origin Story Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    The Shagun Journey
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative">
+                        <img src="images/about/venue-history.jpg" alt="Historical Photo of Shagun Banquet Hall" class="rounded-xl shadow-lg w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 shadow-lg rounded-lg border-2 border-gold hidden md:block">
+                            <p class="text-amaranth-500 font-serif text-lg italic">Celebrating [X] Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-serif text-gray-800 mb-4">A Vision of Elegance</h3>
+                    <p class="text-gray-600 mb-6">
+                        Shagun Banquet Hall began as a vision to create a distinguished venue where life's most precious moments could be celebrated with elegance and sophistication. Founded by the [Founder Name] family in [Year], what started as a modest establishment has evolved into one of Uttarpara's most prestigious event destinations.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        The name "Shagun," which signifies auspiciousness and good fortune in Indian tradition, was chosen to reflect our commitment to creating positive and joyful celebrations. Over the years, we have grown and refined our offerings, constantly elevating our standards to exceed the expectations of our discerning clientele.
+                    </p>
+                    <p class="text-gray-600">
+                        Today, Shagun Banquet Hall stands as a testament to our founding vision—a place where traditions are honored, memories are created, and celebrations come to life with impeccable attention to detail and personalized service.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Timeline Section -->
+            <div class="mt-24 relative timeline-container pb-12" data-aos="fade-up">
+                <h3 class="text-2xl font-serif text-gray-800 mb-16 text-center">Our Milestone Journey</h3>
+                
+                <!-- Timeline Item 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 relative">
+                    <div class="timeline-marker" style="top: 50%;"></div>
+                    <div class="text-right pr-8 md:pr-16">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-gold">
+                            <h4 class="text-xl font-serif text-amaranth-500 mb-2">[Founding Year]</h4>
+                            <p class="text-gray-600">Shagun Banquet Hall was established in Uttarpara, opening its doors with a vision to create memorable celebrations.</p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 relative">
+                    <div class="timeline-marker" style="top: 50%;"></div>
+                    <div class="md:order-2 text-left pl-8 md:pl-16">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-r-4 border-gold">
+                            <h4 class="text-xl font-serif text-amaranth-500 mb-2">[Year of Expansion]</h4>
+                            <p class="text-gray-600">Major renovation and expansion, introducing our grand main hall with increased capacity and modern amenities.</p>
+                        </div>
+                    </div>
+                    <div class="md:order-1"></div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 relative">
+                    <div class="timeline-marker" style="top: 50%;"></div>
+                    <div class="text-right pr-8 md:pr-16">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-gold">
+                            <h4 class="text-xl font-serif text-amaranth-500 mb-2">[Year of Service Expansion]</h4>
+                            <p class="text-gray-600">Introduction of comprehensive in-house services including catering, décor, and entertainment solutions.</p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+                    <div class="timeline-marker" style="top: 50%;"></div>
+                    <div class="md:order-2 text-left pl-8 md:pl-16">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-r-4 border-gold">
+                            <h4 class="text-xl font-serif text-amaranth-500 mb-2">[Recent Year]</h4>
+                            <p class="text-gray-600">Celebrated hosting our 5,000th event and received recognition as Uttarpara's premier event destination.</p>
+                        </div>
+                    </div>
+                    <div class="md:order-1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mission & Values Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Our Mission & Values
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    At Shagun Banquet Hall, we are guided by a commitment to excellence and a passion for creating extraordinary celebrations.
+                </p>
+            </div>
+            
+            <!-- Mission Statement -->
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden mb-16" data-aos="fade-up">
+                <div class="p-8 md:p-12 border-l-4 border-amaranth-500">
+                    <h3 class="text-2xl font-serif text-gray-800 mb-6">Our Mission</h3>
+                    <p class="text-xl text-gray-600 italic">
+                        "To create unforgettable celebrations by providing elegant spaces, exceptional service, and personalized experiences that honor life's most precious moments."
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Value 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-gray-800 mb-4 text-center">Excellence</h3>
+                    <p class="text-gray-600 text-center">
+                        We are committed to delivering the highest standards in every aspect of our service, from the quality of our spaces to the attentiveness of our staff.
+                    </p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-gray-800 mb-4 text-center">Personalization</h3>
+                    <p class="text-gray-600 text-center">
+                        We believe every celebration is unique. We take the time to understand your vision and tailor our services to create your perfect event.
+                    </p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-gray-800 mb-4 text-center">Integrity</h3>
+                    <p class="text-gray-600 text-center">
+                        We operate with transparency, honesty, and respect in all our interactions, building trust with our clients and community.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-gray-800 mb-4 text-center">Community</h3>
+                    <p class="text-gray-600 text-center">
+                        We are proud to be an integral part of the Uttarpara community, supporting local artisans and businesses while creating meaningful connections.
+                    </p>
+                </div>
+                
+                <!-- Value 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-gray-800 mb-4 text-center">Sustainability</h3>
+                    <p class="text-gray-600 text-center">
+                        We are committed to implementing eco-friendly practices that minimize our environmental impact while maintaining the elegance of our offerings.
+                    </p>
+                </div>
+                
+                <!-- Value 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-gray-800 mb-4 text-center">Innovation</h3>
+                    <p class="text-gray-600 text-center">
+                        We continuously seek new ways to enhance our services, incorporating creative ideas and emerging trends while honoring timeless traditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Meet Our Team
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our dedicated team of professionals works passionately to bring your vision to life, ensuring every detail of your celebration is perfect.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Team Member 1 - Owner/Director -->
+                <div class="team-member group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/about/team-director.jpg" alt="Director of Shagun Banquet Hall" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-serif text-white mb-2">[Director Name]</h3>
+                        <p class="text-gold font-medium mb-2">Owner & Director</p>
+                        <p class="text-gray-200 mb-4 text-sm">
+                            With over [X] years of experience in hospitality and event management, [Name] leads with a vision for excellence and personalized service.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-overlay absolute inset-0 bg-amaranth-500 opacity-0 transition-opacity duration-300 flex items-center justify-center p-8">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-serif mb-4">[Director Name]</h3>
+                            <p class="mb-4">
+                                "My passion is creating spaces where life's most beautiful moments can be celebrated with elegance and joy. At Shagun, we don't just host events—we craft experiences that become cherished memories."
+                            </p>
+                            <p class="italic">
+                                Favorite part of the job: Seeing the joy on clients' faces when they first see their decorated venue
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 - Event Manager -->
+                <div class="team-member group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/about/team-event-manager.jpg" alt="Event Manager at Shagun Banquet Hall" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-serif text-white mb-2">[Manager Name]</h3>
+                        <p class="text-gold font-medium mb-2">Senior Event Manager</p>
+                        <p class="text-gray-200 mb-4 text-sm">
+                            [Name] brings creativity and precision to every event, coordinating all aspects to ensure seamless execution from start to finish.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-overlay absolute inset-0 bg-amaranth-500 opacity-0 transition-opacity duration-300 flex items-center justify-center p-8">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-serif mb-4">[Manager Name]</h3>
+                            <p class="mb-4">
+                                "Every event tells a unique story. My role is to understand your vision and transform it into reality, handling all the details so you can focus on making memories."
+                            </p>
+                            <p class="italic">
+                                Favorite part of the job: The creative process of designing unique event experiences
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 - Head Chef (continued) -->
+                <div class="team-member group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/about/team-chef.jpg" alt="Head Chef at Shagun Banquet Hall" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-serif text-white mb-2">[Chef Name]</h3>
+                        <p class="text-gold font-medium mb-2">Head Chef</p>
+                        <p class="text-gray-200 mb-4 text-sm">
+                            With experience in both traditional Bengali cuisine and international flavors, [Chef Name] crafts memorable culinary experiences for every event.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fas fa-utensils"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-overlay absolute inset-0 bg-amaranth-500 opacity-0 transition-opacity duration-300 flex items-center justify-center p-8">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-serif mb-4">[Chef Name]</h3>
+                            <p class="mb-4">
+                                "Food is central to celebration in our culture. I take pride in creating menus that honor traditions while incorporating modern culinary techniques and presentations."
+                            </p>
+                            <p class="italic">
+                                Favorite part of the job: Seeing empty plates return to the kitchen
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 - Decor Specialist -->
+                <div class="team-member group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/about/team-decor.jpg" alt="Decoration Specialist at Shagun Banquet Hall" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-serif text-white mb-2">[Designer Name]</h3>
+                        <p class="text-gold font-medium mb-2">Decor Specialist</p>
+                        <p class="text-gray-200 mb-4 text-sm">
+                            With an eye for beauty and detail, [Name] transforms our spaces into stunning settings that perfectly complement your celebration theme.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-overlay absolute inset-0 bg-amaranth-500 opacity-0 transition-opacity duration-300 flex items-center justify-center p-8">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-serif mb-4">[Designer Name]</h3>
+                            <p class="mb-4">
+                                "Every celebration deserves a beautiful backdrop. I love working with clients to understand their aesthetic vision and bringing it to life through thoughtful design elements."
+                            </p>
+                            <p class="italic">
+                                Favorite part of the job: The moment when clients first see their decorated space
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 - Customer Relations -->
+                <div class="team-member group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/about/team-customer-relations.jpg" alt="Customer Relations Manager at Shagun Banquet Hall" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-serif text-white mb-2">[CR Manager Name]</h3>
+                        <p class="text-gold font-medium mb-2">Customer Relations Manager</p>
+                        <p class="text-gray-200 mb-4 text-sm">
+                            As your primary point of contact, [Name] ensures that your experience with Shagun is smooth and enjoyable from first inquiry to final farewell.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-overlay absolute inset-0 bg-amaranth-500 opacity-0 transition-opacity duration-300 flex items-center justify-center p-8">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-serif mb-4">[CR Manager Name]</h3>
+                            <p class="mb-4">
+                                "Building relationships is at the heart of what we do. I'm here to listen, understand your needs, and ensure that every aspect of your event exceeds your expectations."
+                            </p>
+                            <p class="italic">
+                                Favorite part of the job: Developing lasting relationships with our clients
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 - Technical Coordinator -->
+                <div class="team-member group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/about/team-technical.jpg" alt="Technical Coordinator at Shagun Banquet Hall" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-serif text-white mb-2">[Tech Name]</h3>
+                        <p class="text-gold font-medium mb-2">Technical Coordinator</p>
+                        <p class="text-gray-200 mb-4 text-sm">
+                            Managing our state-of-the-art audio-visual systems, [Name] ensures that the technical aspects of your event run flawlessly.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gold transition-colors">
+                                <i class="fas fa-music"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member-overlay absolute inset-0 bg-amaranth-500 opacity-0 transition-opacity duration-300 flex items-center justify-center p-8">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-serif mb-4">[Tech Name]</h3>
+                            <p class="mb-4">
+                                "From perfect sound to atmospheric lighting, the technical elements can elevate any event. I work behind the scenes to ensure everything runs smoothly so you can focus on enjoying your celebration."
+                            </p>
+                            <p class="italic">
+                                Favorite part of the job: Creating the perfect ambiance through lighting and sound
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Advantage Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Strategic Location
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Situated in the heart of Uttarpara, Shagun Banquet Hall offers unparalleled convenience and accessibility for you and your guests.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-white p-8 rounded-xl shadow-lg h-full">
+                        <h3 class="text-2xl font-serif text-gray-800 mb-6">Centrally Located</h3>
+                        <p class="text-gray-600 mb-6">
+                            Located at 105, Bijay Krishna Street, near the Telephone Exchange in Kotrung, Uttarpara, West Bengal, our venue combines excellent accessibility with a serene environment perfect for celebrations.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-car text-gold mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-medium text-gray-800">Road Connectivity:</span>
+                                    <p class="text-gray-600">Easily accessible from major highways and roads, with ample parking for up to 22 vehicles.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-train text-gold mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-medium text-gray-800">Public Transportation:</span>
+                                    <p class="text-gray-600">Just minutes away from Uttarpara Railway Station with regular train services to Kolkata and nearby cities.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-medium text-gray-800">Landmark Access:</span>
+                                    <p class="text-gray-600">Located near the Uttarpara Telephone Exchange, a well-known landmark that makes it easy for guests to find us.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-hotel text-gold mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-medium text-gray-800">Nearby Accommodations:</span>
+                                    <p class="text-gray-600">Several quality hotels and guest houses within a short distance for out-of-town guests.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="contact.html#location" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                            Get Directions
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" class="h-96 md:h-full">
+                    <div class="relative h-full rounded-xl overflow-hidden shadow-lg">
+                        <!-- Replace with an actual Google Maps iframe or better yet, a static location image -->
+                        <img src="images/about/location-map.jpg" alt="Map showing location of Shagun Banquet Hall" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <a href="https://maps.google.com" target="_blank" class="bg-white hover:bg-amaranth-500 text-amaranth-500 hover:text-white font-medium py-3 px-6 rounded-full transition-colors flex items-center">
+                                <i class="fas fa-map-marked-alt mr-2"></i>
+                                View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Community Engagement Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Our Community Commitment
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    At Shagun Banquet Hall, we believe in being more than a business—we're an active member of the Uttarpara community, committed to making a positive impact.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-2 order-2 lg:order-1" data-aos="fade-right">
+                    <div class="bg-gray-50 p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-serif text-gray-800 mb-6">Supporting Local Artisans & Businesses</h3>
+                        <p class="text-gray-600 mb-6">
+                            We take pride in sourcing materials, food ingredients, and services from local vendors and artisans whenever possible. This commitment not only ensures the freshest ingredients and authentic craftsmanship but also strengthens our local economy.
+                        </p>
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-utensils text-amaranth-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Local Cuisine Partners</h4>
+                                    <p class="text-gray-600">We source ingredients from nearby farms and markets, supporting sustainable agriculture while ensuring the freshest flavors for your events.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-paint-brush text-amaranth-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Artisan Collaborations</h4>
+                                    <p class="text-gray-600">Our decorations and furnishings often feature the work of local craftspeople, showcasing traditional Bengali artistry and contemporary design.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-hands-helping text-amaranth-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Community Initiatives</h4>
+                                    <p class="text-gray-600">We regularly participate in and sponsor local cultural events, festivals, and charitable initiatives that benefit the Uttarpara community.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="border-l-4 border-gold pl-4 italic text-gray-600">
+                            "We believe that our success is intertwined with the prosperity of our community. By supporting local businesses and artisans, we create a celebration ecosystem that honors our cultural heritage while building a sustainable future."
+                            <footer class="mt-2 text-right text-gray-500">- [Director Name], Founder</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                
+                <!-- Image Gallery -->
+                <div class="order-1 lg:order-2" data-aos="fade-left">
+                    <div class="grid grid-cols-2 gap-4 h-full">
+                        <div class="space-y-4">
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="images/about/community-1.jpg" alt="Local Artisan Collaboration" class="w-full h-48 object-cover">
+                            </div>
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="images/about/community-2.jpg" alt="Community Event at Shagun" class="w-full h-48 object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="images/about/community-3.jpg" alt="Local Food Source" class="w-full h-48 object-cover">
+                            </div>
+                            <div class="rounded-lg overflow-hidden shadow-md">
+                                <img src="images/about/community-4.jpg" alt="Charitable Initiative" class="w-full h-48 object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sustainability Practices Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Our Sustainability Commitment
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We believe in celebrating responsibly. Our eco-friendly initiatives help minimize our environmental footprint without compromising on the elegance of your experience.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Eco-friendly Practice 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/about/eco-energy.jpg');">
+                        <div class="h-full w-full bg-gradient-to-r from-amaranth-500 to-transparent opacity-50"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-lightbulb text-amaranth-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-800 mb-3">Energy Efficiency</h3>
+                        <p class="text-gray-600">
+                            We've implemented energy-efficient lighting throughout our venue, utilizing LED technologies and smart controls to reduce consumption while maintaining the perfect ambiance for your events.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Eco-friendly Practice 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/about/eco-waste.jpg');">
+                        <div class="h-full w-full bg-gradient-to-r from-amaranth-500 to-transparent opacity-50"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-recycle text-amaranth-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-800 mb-3">Waste Reduction</h3>
+                        <p class="text-gray-600">
+                            Our comprehensive waste management program includes recycling, composting of food waste, and minimizing single-use items. We work closely with clients to plan events that reduce unnecessary waste.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Eco-friendly Practice 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/about/eco-food.jpg');">
+                        <div class="h-full w-full bg-gradient-to-r from-amaranth-500 to-transparent opacity-50"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-seedling text-amaranth-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-800 mb-3">Sustainable Sourcing</h3>
+                        <p class="text-gray-600">
+                            Our kitchen team works with local suppliers who practice sustainable farming and fishing, reducing food miles while supporting environmentally responsible production methods.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Eco-friendly Practice 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/about/eco-water.jpg');">
+                        <div class="h-full w-full bg-gradient-to-r from-amaranth-500 to-transparent opacity-50"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-tint text-amaranth-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-800 mb-3">Water Conservation</h3>
+                        <p class="text-gray-600">
+                            We've installed water-efficient fixtures throughout our venue and implemented rainwater harvesting systems to reduce our water footprint while maintaining impeccable cleanliness standards.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Eco-friendly Practice 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/about/eco-decor.jpg');">
+                        <div class="h-full w-full bg-gradient-to-r from-amaranth-500 to-transparent opacity-50"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-leaf text-amaranth-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-800 mb-3">Eco-Friendly Décor</h3>
+                        <p class="text-gray-600">
+                            Our decoration team specializes in creating stunning environments using sustainable materials, reusable elements, and locally-sourced florals that minimize environmental impact.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Eco-friendly Practice 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/about/eco-digital.jpg');">
+                        <div class="h-full w-full bg-gradient-to-r from-amaranth-500 to-transparent opacity-50"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-amaranth-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-tablet-alt text-amaranth-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-800 mb-3">Digital Transformation</h3>
+                        <p class="text-gray-600">
+                            We've embraced digital solutions for event planning, invitations, and communications, substantially reducing paper usage while enhancing convenience for our clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <a href="contact.html" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                    Learn More About Our Green Initiatives
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/about/about-cta.jpg');">
+        <div class="absolute inset-0 bg-gold opacity-80"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-white mb-6">
+                    Begin Your Shagun Experience
+                </h2>
+                <p class="text-xl text-white opacity-90 mb-10">
+                    Now that you know our story, let us be part of yours. Contact us today to schedule a personal tour of our venue and discover how we can make your celebration truly extraordinary.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="contact.html" class="inline-block bg-white text-amaranth-500 hover:bg-amaranth-500 hover:text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                        Schedule a Visit
+                    </a>
+                    <a href="gallery.html" class="inline-block bg-transparent text-white hover:bg-white hover:text-amaranth-500 font-medium py-3 px-8 border-2 border-white rounded-full transition-colors text-lg">
+                        Explore Our Gallery
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Contact Information -->
+                <div>
+                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        Creating memorable celebrations with elegance and sophistication.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                            <p class="text-gray-300">105, Bijay Krishna Street, Near Telephone Exchange, Kotrung, Uttarpara, West Bengal</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-gold mr-3"></i>
+                            <p class="text-gray-300">+91 [Phone Number]</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-3"></i>
+                            <p class="text-gray-300">info@shagunbanquet.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="venues.html" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
+                        <li><a href="packages.html" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Business Hours</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Monday - Saturday</span>
+                            <span class="text-gold">9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-300">Sunday</span>
+                            <span class="text-gold">Closed</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-gold transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6">Subscribe to Updates</h3>
+                    <p class="text-gray-300 mb-4">
+                        Stay informed about our latest offers and packages.
+                    </p>
+                    <form class="space-y-3">
+                        <div>
+                            <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-gold text-white">
+                        </div>
+                        <button type="submit" class="bg-gold hover:bg-gold-600 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Shagun Banquet Hall. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for interactive elements -->
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
