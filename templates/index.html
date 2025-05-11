@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,20 +131,20 @@
     <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center">
+            <a href="{% url 'website:index' %}" class="flex items-center">
                 <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
             </a>
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Home</a>
-                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
-                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
-                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
-                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
-                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
-                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
-                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+                <a href="{% url 'website:index' %}" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Home</a>
+                <a href="{% url 'website:about' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="{% url 'website:venues' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="{% url 'website:services' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="{% url 'website:gallery' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="{% url 'website:packages' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="{% url 'website:testimonials' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="{% url 'website:contact' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
             </nav>
             
             <!-- Mobile Menu Button -->
@@ -154,7 +155,7 @@
             </button>
             
             <!-- Contact Button -->
-            <a href="contact.html" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+            <a href="{% url 'website:contact' %}" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
                 Book Now
             </a>
         </div>
@@ -162,15 +163,15 @@
         <!-- Mobile Navigation Menu (Hidden by default) -->
         <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
             <nav class="flex flex-col space-y-4">
-                <a href="index.html" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Home</a>
-                <a href="about.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
-                <a href="venues.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
-                <a href="services.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
-                <a href="gallery.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
-                <a href="packages.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
-                <a href="testimonials.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
-                <a href="contact.html" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
-                <a href="contact.html" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                <a href="{% url 'website:index' %}" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Home</a>
+                <a href="{% url 'website:about' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
+                <a href="{% url 'website:venues' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Venues & Spaces</a>
+                <a href="{% url 'website:services' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
+                <a href="{% url 'website:gallery' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
+                <a href="{% url 'website:packages' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
+                <a href="{% url 'website:testimonials' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
+                <a href="{% url 'website:contact' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
+                <a href="{% url 'website:contact' %}" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
                     Book Now
                 </a>
             </nav>
@@ -195,7 +196,7 @@
                             <p class="text-xl md:text-2xl mb-8 text-shadow">
                                 Where Memorable Celebrations Come to Life
                             </p>
-                            <a href="contact.html" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                            <a href="{% url 'website:contact' %}" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
                                 Plan Your Special Day
                             </a>
                         </div>
@@ -215,7 +216,7 @@
                             <p class="text-xl md:text-2xl mb-8 text-shadow">
                                 Creating Magical Moments Since [Year]
                             </p>
-                            <a href="gallery.html" class="inline-block bg-gold hover:bg-gold-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                            <a href="{% url 'website:gallery' %}" class="inline-block bg-gold hover:bg-gold-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
                                 Explore Our Gallery
                             </a>
                         </div>
@@ -235,7 +236,7 @@
                             <p class="text-xl md:text-2xl mb-8 text-shadow">
                                 Personalized Services for Your Perfect Event
                             </p>
-                            <a href="services.html" class="inline-block bg-white text-amaranth-500 hover:text-amaranth-600 font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                            <a href="{% url 'website:services' %}" class="inline-block bg-white text-amaranth-500 hover:text-amaranth-600 font-medium py-3 px-8 rounded-full transition-colors text-lg">
                                 Discover Our Services
                             </a>
                         </div>
@@ -278,7 +279,7 @@
                     Located near the Uttarpara Telephone Exchange, our venue provides the perfect setting for weddings,
                     receptions, corporate events, and special occasions with capacity for 150-500 guests.
                 </p>
-                <a href="about.html" class="inline-block text-amaranth-500 hover:text-amaranth-600 font-medium border-b-2 border-amaranth-500 hover:border-amaranth-600 transition-colors">
+                <a href="{% url 'website:about' %}" class="inline-block text-amaranth-500 hover:text-amaranth-600 font-medium border-b-2 border-amaranth-500 hover:border-amaranth-600 transition-colors">
                     Learn More About Us
                 </a>
             </div>
@@ -317,7 +318,7 @@
                                 <i class="fas fa-ruler-combined text-gold mr-2"></i> Area: [Size] sq. ft.
                             </li>
                         </ul>
-                        <a href="venues.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                        <a href="{% url 'website:venues' %}" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
                             View Details
                         </a>
                     </div>
@@ -340,7 +341,7 @@
                                 <i class="fas fa-ruler-combined text-gold mr-2"></i> Area: [Size] sq. ft.
                             </li>
                         </ul>
-                        <a href="venues.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                        <a href="{% url 'website:venues' %}" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
                             View Details
                         </a>
                     </div>
@@ -363,7 +364,7 @@
                                 <i class="fas fa-ruler-combined text-gold mr-2"></i> Area: [Size] sq. ft.
                             </li>
                         </ul>
-                        <a href="venues.html" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                        <a href="{% url 'website:venues' %}" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
                             View Details
                         </a>
                     </div>
@@ -444,7 +445,7 @@
             </div>
             
             <div class="text-center mt-12" data-aos="fade-up">
-                <a href="services.html" class="inline-block bg-transparent hover:bg-amaranth-500 text-amaranth-500 hover:text-white font-medium py-3 px-8 border border-amaranth-500 hover:border-transparent rounded-full transition-colors">
+                <a href="{% url 'website:services' %}" class="inline-block bg-transparent hover:bg-amaranth-500 text-amaranth-500 hover:text-white font-medium py-3 px-8 border border-amaranth-500 hover:border-transparent rounded-full transition-colors">
                     Explore All Services
                 </a>
             </div>
@@ -548,7 +549,7 @@
             </div>
             
             <div class="text-center mt-12" data-aos="fade-up">
-                <a href="testimonials.html" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                <a href="{% url 'website:testimonials' %}" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
                     Read More Testimonials
                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -614,7 +615,7 @@
             </div>
             
             <div class="text-center mt-12" data-aos="fade-up">
-                <a href="gallery.html" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                <a href="{% url 'website:gallery' %}" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
                     View Full Gallery
                 </a>
             </div>
@@ -634,7 +635,7 @@
                     Let us help you create memories that will last a lifetime. Contact our event specialists today to begin planning your perfect celebration.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                    <a href="contact.html" class="inline-block bg-white text-amaranth-500 hover:bg-gold hover:text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
+                    <a href="{% url 'website:contact' %}" class="inline-block bg-white text-amaranth-500 hover:bg-gold hover:text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
                         Book a Consultation
                     </a>
                     <div class="flex items-center">
@@ -677,13 +678,13 @@
                 <div>
                     <h3 class="text-xl font-medium mb-6">Quick Links</h3>
                     <ul class="space-y-3">
-                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
-                        <li><a href="venues.html" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
-                        <li><a href="gallery.html" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
-                        <li><a href="packages.html" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
-                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                        <li><a href="{% url 'website:about' %}" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="{% url 'website:venues' %}" class="text-gray-300 hover:text-gold transition-colors">Venues & Spaces</a></li>
+                        <li><a href="{% url 'website:services' %}" class="text-gray-300 hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="{% url 'website:gallery' %}" class="text-gray-300 hover:text-gold transition-colors">Photo Gallery</a></li>
+                        <li><a href="{% url 'website:packages' %}" class="text-gray-300 hover:text-gold transition-colors">Packages & Pricing</a></li>
+                        <li><a href="{% url 'website:testimonials' %}" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="{% url 'website:contact' %}" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
                 
