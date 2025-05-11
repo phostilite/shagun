@@ -1,0 +1,135 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Django Static files
+/static/
+/staticfiles/
+
+# Django Secret Key
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Django Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+virtualenv/
+
+# Django Production settings
+prod_settings.py
+
+# Tailwind CSS
+/node_modules/
+/public/build/
+/public/hot/
+/public/storage/
+tailwind.output.css
+
+# JavaScript
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-workspace
+.DS_Store
+.history/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env.dev
+.env.prod
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pipenv
+Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Webpack
+.webpack/
+webpack-stats.json
+
+# Docker
+docker-compose.override.yml
+
+# Project specific
+*.backup
+*.bak
+*.tmp
+*.swp
+*~
