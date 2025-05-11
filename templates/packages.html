@@ -130,7 +130,7 @@
         <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
             <!-- Logo -->
             <a href="{% url 'website:index' %}" class="flex items-center">
-                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+                <img src="{% static 'images/logo.png' %}" alt="Shagun Banquet Hall Logo" class="h-16">
             </a>
             
             <!-- Desktop Navigation -->
@@ -178,7 +178,7 @@
 
     <!-- Page Banner -->
     <section class="page-banner relative overflow-hidden pt-24">
-        <div class="bg-cover bg-center h-full" style="background-image: url('images/packages/packages-banner.jpg');">
+        <div class="bg-cover bg-center h-full" style="background-image: url('{% static 'images/packages/packages-banner.jpg' %}');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="container mx-auto px-4 h-full flex items-center justify-center">
                 <div class="text-center text-white z-10 max-w-3xl" data-aos="fade-up">
@@ -1097,7 +1097,7 @@
                         15% Off
                     </div>
                     <div class="relative h-64">
-                        <img src="images/packages/monsoon-special.jpg" alt="Monsoon Special Package" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="{% static 'images/packages/monsoon-special.jpg' %}" alt="Monsoon Special Package" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white z-10">
                             <h3 class="text-2xl font-serif font-semibold mb-2">Monsoon Special</h3>
@@ -1123,7 +1123,7 @@
                         20% Off
                     </div>
                     <div class="relative h-64">
-                        <img src="images/packages/corporate-special.jpg" alt="Weekday Corporate Special" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="{% static 'images/packages/corporate-special.jpg' %}" alt="Weekday Corporate Special" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white z-10">
                             <h3 class="text-2xl font-serif font-semibold mb-2">Weekday Corporate Special</h3>
@@ -1147,7 +1147,7 @@
     </section>
 
     <!-- Event Calculator CTA -->
-    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/packages/calculator-bg.jpg');">
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('{% static 'images/packages/calculator-bg.jpg' %}');">
         <div class="absolute inset-0 bg-gray-900 opacity-80"></div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden" data-aos="fade-up">
@@ -1295,7 +1295,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 bg-cover bg-center relative" style="background-image: url('images/packages/cta-background.jpg');">
+    <section class="py-24 bg-cover bg-center relative" style="background-image: url('{% static 'images/packages/cta-background.jpg' %}');">
         <div class="absolute inset-0 bg-amaranth-500 opacity-90"></div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="max-w-3xl mx-auto text-center text-white" data-aos="fade-up">
@@ -1324,7 +1324,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Contact Information -->
                 <div>
-                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <img src="{% static 'images/logo.png' %}" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
                     <p class="text-gray-400 mb-6">
                         Creating memorable celebrations with elegance and sophistication.
                     </p>

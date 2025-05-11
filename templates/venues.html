@@ -137,7 +137,7 @@
         <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
             <!-- Logo -->
             <a href="{% url 'website:index' %}" class="flex items-center">
-                <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16">
+                <img src="{% static 'images/logo.png' %}" alt="Shagun Banquet Hall Logo" class="h-16">
             </a>
             
             <!-- Desktop Navigation -->
@@ -185,7 +185,7 @@
 
     <!-- Page Banner -->
     <section class="page-banner relative overflow-hidden pt-24">
-        <div class="bg-cover bg-center h-full" style="background-image: url('images/venues/venues-banner.jpg');">
+        <div class="bg-cover bg-center h-full" style="background-image: url('{% static 'images/venues/venues-banner.jpg' %}');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="container mx-auto px-4 h-full flex items-center justify-center">
                 <div class="text-center text-white z-10 py-20" data-aos="fade-up">
@@ -297,8 +297,8 @@
                         <!-- Image Section -->
                         <div class="w-full lg:w-1/2">
                             <div class="relative h-96 lg:h-full">
-                                <img src="images/venues/main-hall-large.jpg" alt="Main Banquet Hall at Shagun" class="w-full h-full object-cover">
-                                <a href="images/venues/main-hall-large.jpg" data-lightbox="main-hall" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
+                                <img src="{% static 'images/venues/main-hall-large.jpg' %}" alt="Main Banquet Hall at Shagun" class="w-full h-full object-cover">
+                                <a href="{% static 'images/venues/main-hall-large.jpg' %}" data-lightbox="main-hall" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
                                     <i class="fas fa-search-plus text-amaranth-500"></i>
                                 </a>
                             </div>
@@ -352,25 +352,25 @@
                             <div>
                                 <h4 class="text-xl font-medium text-gray-800 mb-4">Gallery</h4>
                                 <div class="grid grid-cols-3 gap-2">
-                                    <a href="images/venues/main-hall-2.jpg" data-lightbox="main-hall" class="gallery-item">
+                                    <a href="{% static 'images/venues/main-hall-2.jpg' %}" data-lightbox="main-hall" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/main-hall-2.jpg" alt="Main Hall Setup" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/main-hall-2.jpg' %}" alt="Main Hall Setup" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="images/venues/main-hall-3.jpg" data-lightbox="main-hall" class="gallery-item">
+                                    <a href="{% static 'images/venues/main-hall-3.jpg' %}" data-lightbox="main-hall" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/main-hall-3.jpg" alt="Main Hall Decoration" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/main-hall-3.jpg' %}" alt="Main Hall Decoration" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="images/venues/main-hall-4.jpg" data-lightbox="main-hall" class="gallery-item">
+                                    <a href="{% static 'images/venues/main-hall-4.jpg' %}" data-lightbox="main-hall" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/main-hall-4.jpg" alt="Main Hall Event" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/main-hall-4.jpg' %}" alt="Main Hall Event" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
@@ -388,8 +388,8 @@
                         <!-- Image Section -->
                         <div class="w-full lg:w-1/2">
                             <div class="relative h-96 lg:h-full">
-                                <img src="images/venues/secondary-space-large.jpg" alt="Secondary Space at Shagun" class="w-full h-full object-cover">
-                                <a href="images/venues/secondary-space-large.jpg" data-lightbox="secondary-space" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
+                                <img src="{% static 'images/venues/secondary-space-large.jpg' %}" alt="Secondary Space at Shagun" class="w-full h-full object-cover">
+                                <a href="{% static 'images/venues/secondary-space-large.jpg' %}" data-lightbox="secondary-space" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
                                     <i class="fas fa-search-plus text-amaranth-500"></i>
                                 </a>
                             </div>
@@ -443,25 +443,25 @@
                             <div>
                                 <h4 class="text-xl font-medium text-gray-800 mb-4">Gallery</h4>
                                 <div class="grid grid-cols-3 gap-2">
-                                    <a href="images/venues/secondary-space-2.jpg" data-lightbox="secondary-space" class="gallery-item">
+                                    <a href="{% static 'images/venues/secondary-space-2.jpg' %}" data-lightbox="secondary-space" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/secondary-space-2.jpg" alt="Secondary Space Setup" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/secondary-space-2.jpg' %}" alt="Secondary Space Setup" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="images/venues/secondary-space-3.jpg" data-lightbox="secondary-space" class="gallery-item">
+                                    <a href="{% static 'images/venues/secondary-space-3.jpg' %}" data-lightbox="secondary-space" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/secondary-space-3.jpg" alt="Secondary Space Decoration" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/secondary-space-3.jpg' %}" alt="Secondary Space Decoration" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="images/venues/secondary-space-4.jpg" data-lightbox="secondary-space" class="gallery-item">
+                                    <a href="{% static 'images/venues/secondary-space-4.jpg' %}" data-lightbox="secondary-space" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/secondary-space-4.jpg" alt="Secondary Space Event" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/secondary-space-4.jpg' %}" alt="Secondary Space Event" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
@@ -479,8 +479,8 @@
                         <!-- Image Section -->
                         <div class="w-full lg:w-1/2">
                             <div class="relative h-96 lg:h-full">
-                                <img src="images/venues/intimate-space-large.jpg" alt="Intimate Space at Shagun" class="w-full h-full object-cover">
-                                <a href="images/venues/intimate-space-large.jpg" data-lightbox="intimate-space" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
+                                <img src="{% static 'images/venues/intimate-space-large.jpg' %}" alt="Intimate Space at Shagun" class="w-full h-full object-cover">
+                                <a href="{% static 'images/venues/intimate-space-large.jpg' %}" data-lightbox="intimate-space" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
                                     <i class="fas fa-search-plus text-amaranth-500"></i>
                                 </a>
                             </div>
@@ -534,25 +534,25 @@
                             <div>
                                 <h4 class="text-xl font-medium text-gray-800 mb-4">Gallery</h4>
                                 <div class="grid grid-cols-3 gap-2">
-                                    <a href="images/venues/intimate-space-2.jpg" data-lightbox="intimate-space" class="gallery-item">
+                                    <a href="{% static 'images/venues/intimate-space-2.jpg' %}" data-lightbox="intimate-space" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/intimate-space-2.jpg" alt="Intimate Space Setup" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/intimate-space-2.jpg' %}" alt="Intimate Space Setup" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="images/venues/intimate-space-3.jpg" data-lightbox="intimate-space" class="gallery-item">
+                                    <a href="{% static 'images/venues/intimate-space-3.jpg' %}" data-lightbox="intimate-space" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/intimate-space-3.jpg" alt="Intimate Space Decoration" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/intimate-space-3.jpg' %}" alt="Intimate Space Decoration" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="images/venues/intimate-space-4.jpg" data-lightbox="intimate-space" class="gallery-item">
+                                    <a href="{% static 'images/venues/intimate-space-4.jpg' %}" data-lightbox="intimate-space" class="gallery-item">
                                         <div class="relative h-20 overflow-hidden rounded">
-                                            <img src="images/venues/intimate-space-4.jpg" alt="Intimate Space Event" class="w-full h-full object-cover">
+                                            <img src="{% static 'images/venues/intimate-space-4.jpg' %}" alt="Intimate Space Event" class="w-full h-full object-cover">
                                             <div class="gallery-overlay absolute inset-0 bg-amaranth-500 bg-opacity-20 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                                 <i class="fas fa-search-plus text-white"></i>
                                             </div>
@@ -570,8 +570,8 @@
                         <!-- Image Section -->
                         <div class="w-full lg:w-1/2">
                             <div class="relative h-96 lg:h-full">
-                                <img src="images/venues/complimentary-rooms.jpg" alt="Complimentary Rooms at Shagun" class="w-full h-full object-cover">
-                                <a href="images/venues/complimentary-rooms.jpg" data-lightbox="complimentary-rooms" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
+                                <img src="{% static 'images/venues/complimentary-rooms.jpg' %}" alt="Complimentary Rooms at Shagun" class="w-full h-full object-cover">
+                                <a href="{% static 'images/venues/complimentary-rooms.jpg' %}" data-lightbox="complimentary-rooms" class="absolute bottom-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 p-2 rounded-full transition-colors">
                                     <i class="fas fa-search-plus text-amaranth-500"></i>
                                 </a>
                             </div>
@@ -757,7 +757,7 @@
                 <!-- Main Hall Floor Plan -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-64 bg-gray-200 relative">
-                        <img src="images/venues/main-hall-floor-plan.jpg" alt="Main Hall Floor Plan" class="w-full h-full object-cover">
+                        <img src="{% static 'images/venues/main-hall-floor-plan.jpg' %}" alt="Main Hall Floor Plan" class="w-full h-full object-cover">
                         <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
                             <span class="text-white text-lg font-medium">Main Banquet Hall</span>
                         </div>
@@ -776,7 +776,7 @@
                 <!-- Secondary Spaces Floor Plan -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-64 bg-gray-200 relative">
-                        <img src="images/venues/secondary-spaces-floor-plan.jpg" alt="Secondary Spaces Floor Plan" class="w-full h-full object-cover">
+                        <img src="{% static 'images/venues/secondary-spaces-floor-plan.jpg' %}" alt="Secondary Spaces Floor Plan" class="w-full h-full object-cover">
                         <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
                             <span class="text-white text-lg font-medium">Secondary & Intimate Spaces</span>
                         </div>
@@ -796,7 +796,7 @@
     </section>
 
     <!-- Virtual Tour Coming Soon Section -->
-    <section class="py-20 bg-cover bg-center relative" style="background-image: url('images/venues/virtual-tour-bg.jpg');">
+    <section class="py-20 bg-cover bg-center relative" style="background-image: url('{% static 'images/venues/virtual-tour-bg.jpg' %}');">
         <div class="absolute inset-0 bg-black opacity-60"></div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="max-w-3xl mx-auto text-center text-white" data-aos="fade-up">
@@ -961,7 +961,7 @@
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2 relative">
-                        <img src="images/venues/cta-image.jpg" alt="Shagun Banquet Hall Event" class="w-full h-full object-cover object-center">
+                        <img src="{% static 'images/venues/cta-image.jpg' %}" alt="Shagun Banquet Hall Event" class="w-full h-full object-cover object-center">
                         <div class="absolute inset-0 bg-gradient-to-r from-amaranth-500 to-transparent opacity-60 lg:block hidden"></div>
                     </div>
                 </div>
@@ -975,7 +975,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Contact Information -->
                 <div>
-                    <img src="images/logo.png" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
+                    <img src="{% static 'images/logo.png' %}" alt="Shagun Banquet Hall Logo" class="h-16 mb-6">
                     <p class="text-gray-400 mb-6">
                         Creating memorable celebrations with elegance and sophistication.
                     </p>
