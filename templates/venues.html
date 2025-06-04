@@ -80,10 +80,6 @@
     <!-- Custom CSS -->
     <style>
         /* Custom styling beyond Tailwind */
-        .page-banner {
-            height: 60vh;
-            min-height: 400px;
-        }
         
         .text-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -132,70 +128,19 @@
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-white">
-    <!-- Header/Navigation -->
-    <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center py-4">
-            <!-- Logo -->
-            <a href="{% url 'website:index' %}" class="flex items-center">
-                <img src="{% static 'images/logo.png' %}" alt="Shagun Banquet Hall Logo" class="h-16">
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="{% url 'website:index' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
-                <a href="{% url 'website:about' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
-                <a href="{% url 'website:venues' %}" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Venues & Spaces</a>
-                <a href="{% url 'website:services' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
-                <a href="{% url 'website:gallery' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
-                <a href="{% url 'website:packages' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
-                <a href="{% url 'website:testimonials' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
-                <a href="{% url 'website:contact' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
-            </nav>
-            
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden focus:outline-none" id="menu-toggle">
-                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            
-            <!-- Contact Button -->
-            <a href="{% url 'website:contact' %}" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
-                Book Now
-            </a>
-        </div>
-        
-        <!-- Mobile Navigation Menu (Hidden by default) -->
-        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
-            <nav class="flex flex-col space-y-4">
-                <a href="{% url 'website:index' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Home</a>
-                <a href="{% url 'website:about' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">About Us</a>
-                <a href="{% url 'website:venues' %}" class="text-amaranth-500 font-medium text-sm uppercase hover:text-gold transition-colors">Venues & Spaces</a>
-                <a href="{% url 'website:services' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Services</a>
-                <a href="{% url 'website:gallery' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Gallery</a>
-                <a href="{% url 'website:packages' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Packages</a>
-                <a href="{% url 'website:testimonials' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Testimonials</a>
-                <a href="{% url 'website:contact' %}" class="text-gray-700 font-medium text-sm uppercase hover:text-amaranth-500 transition-colors">Contact</a>
-                <a href="{% url 'website:contact' %}" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
-                    Book Now
-                </a>
-            </nav>
-        </div>
-    </header>
+    {% include './navbar.html' %}
 
     <!-- Page Banner -->
-    <section class="page-banner relative overflow-hidden pt-24">
-        <div class="bg-cover bg-center h-full" style="background-image: url('{% static 'images/venues/venues-banner.jpg' %}');">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div class="container mx-auto px-4 h-full flex items-center justify-center">
-                <div class="text-center text-white z-10 py-20" data-aos="fade-up">
-                    <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
-                        Our Elegant Venues & Spaces
-                    </h1>
-                    <p class="text-xl md:text-2xl mb-8 text-shadow max-w-3xl mx-auto">
-                        Discover the perfect setting for your memorable celebration
-                    </p>
-                </div>
+    <section class="pt-24 relative bg-cover bg-center" style="background-image: url('{% static 'images/venues/venues-banner.jpg' %}'); height: 60vh;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="text-center text-white z-10 py-20" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-serif font-semibold text-shadow mb-6">
+                    Our Elegant Venues & Spaces
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-shadow max-w-3xl mx-auto">
+                    Discover the perfect setting for your memorable celebration
+                </p>
             </div>
         </div>
     </section>
@@ -1123,18 +1068,7 @@
                 mobileMenu.classList.toggle('hidden');
             });
             
-            // Navbar Scroll Effect
-            const navbar = document.getElementById('navbar');
             
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('py-2');
-                    navbar.classList.remove('py-4');
-                } else {
-                    navbar.classList.add('py-4');
-                    navbar.classList.remove('py-2');
-                }
-            });
         });
     </script>
 </body>

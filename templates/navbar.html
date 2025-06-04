@@ -1,0 +1,96 @@
+{% load static %}
+<!-- Header/Navigation -->
+<header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-2 md:px-4 flex justify-between items-center py-2">
+        <!-- Logo -->
+        <a href="{% url 'website:index' %}" class="flex items-center">
+            <img src="{% static 'images/logo.png' %}" alt="Shagun Banquet Hall Logo" class="h-16">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="{% url 'website:index' %}" class="{% if request.resolver_match.url_name == 'index' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Home</a>
+            <a href="{% url 'website:about' %}" class="{% if request.resolver_match.url_name == 'about' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">About Us</a>
+            <a href="{% url 'website:venues' %}" class="{% if request.resolver_match.url_name == 'venues' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Venues & Spaces</a>
+            <a href="{% url 'website:services' %}" class="{% if request.resolver_match.url_name == 'services' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Services</a>
+            <a href="{% url 'website:gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Gallery</a>
+            <a href="{% url 'website:packages' %}" class="{% if request.resolver_match.url_name == 'packages' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Packages</a>
+            <a href="{% url 'website:testimonials' %}" class="{% if request.resolver_match.url_name == 'testimonials' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Testimonials</a>
+            <a href="{% url 'website:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Contact</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden focus:outline-none" id="menu-toggle">
+            <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        
+        <!-- Contact Button -->
+        <a href="{% url 'website:contact' %}" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
+            Book Now
+        </a>
+    </div>
+    
+    <!-- Mobile Navigation Menu (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
+        <nav class="flex flex-col space-y-4">
+            <a href="{% url 'website:index' %}" class="{% if request.resolver_match.url_name == 'index' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Home</a>
+            <a href="{% url 'website:about' %}" class="{% if request.resolver_match.url_name == 'about' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">About Us</a>
+            <a href="{% url 'website:venues' %}" class="{% if request.resolver_match.url_name == 'venues' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Venues & Spaces</a>
+            <a href="{% url 'website:services' %}" class="{% if request.resolver_match.url_name == 'services' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Services</a>
+            <a href="{% url 'website:gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Gallery</a>
+            <a href="{% url 'website:packages' %}" class="{% if request.resolver_match.url_name == 'packages' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Packages</a>
+            <a href="{% url 'website:testimonials' %}" class="{% if request.resolver_match.url_name == 'testimonials' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Testimonials</a>
+            <a href="{% url 'website:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Contact</a>
+            <a href="{% url 'website:contact' %}" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
+                Book Now
+            </a>
+        </nav>
+    </div>
+</header>
+
+<!-- Navbar JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+        
+        // Mobile menu toggle
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Navbar scroll behavior
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down - hide navbar
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up - show navbar
+                navbar.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Navbar Scroll Effect
+        // const navbar = document.getElementById('navbar');
+        
+        // window.addEventListener('scroll', function() {
+        //   if (window.scrollY > 50) {
+        //        navbar.classList.add('py-2');
+        //        navbar.classList.remove('py-4');
+        //   } else {
+        //       navbar.classList.add('py-4');
+        //        navbar.classList.remove('py-2');
+        //   }
+        // });
+    });
+</script>
