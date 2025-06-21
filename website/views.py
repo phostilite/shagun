@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.conf import settings
 import logging
 
 # Configure logger
@@ -64,7 +65,10 @@ def testimonials(request):
 def contact(request):
     try:
         logger.info("Rendering contact page")
-        return render(request, 'contact.html')
+        context = {
+            'google_maps_api_key': settings.GOOGLE_MAPS_API_KEY
+        }
+        return render(request, 'contact.html', context)
     except Exception as e:
         logger.error(f"Error rendering contact page: {str(e)}")
         return HttpResponse("Error loading the page", status=500)
