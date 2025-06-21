@@ -17,7 +17,10 @@ def index(request):
 def about(request):
     try:
         logger.info("Rendering about page")
-        return render(request, 'about.html')
+        context = {
+            'google_maps_api_key': settings.GOOGLE_MAPS_API_KEY
+        }
+        return render(request, 'about.html', context)
     except Exception as e:
         logger.error(f"Error rendering about page: {str(e)}")
         return HttpResponse("Error loading the page", status=500)

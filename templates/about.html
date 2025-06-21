@@ -626,61 +626,98 @@
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div data-aos="fade-right">
                     <div class="bg-white p-8 rounded-xl shadow-lg h-full">
-                        <h3 class="text-2xl font-serif text-gray-800 mb-6">Centrally Located</h3>
-                        <p class="text-gray-600 mb-6">
-                            Located at 105, Bijay Krishna Street, near the Telephone Exchange in Kotrung, Uttarpara, West Bengal, our venue combines excellent accessibility with a serene environment perfect for celebrations.
-                        </p>
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-start">
-                                <i class="fas fa-car text-gold mt-1 mr-3"></i>
+                        <h3 class="text-2xl font-serif font-semibold mb-6 text-gray-800">
+                            Prime Location Benefits
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-amaranth-500 mt-1 mr-4"></i>
                                 <div>
-                                    <span class="font-medium text-gray-800">Road Connectivity:</span>
-                                    <p class="text-gray-600">Easily accessible from major highways and roads, with ample parking for up to 22 vehicles.</p>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Central Uttarpara Location</h4>
+                                    <p class="text-gray-600">Located on Bijay Krishna Street, near the prominent Uttarpara Telephone Exchange, making it easy to find and reach.</p>
                                 </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-train text-gold mt-1 mr-3"></i>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-car text-amaranth-500 mt-1 mr-4"></i>
                                 <div>
-                                    <span class="font-medium text-gray-800">Public Transportation:</span>
-                                    <p class="text-gray-600">Just minutes away from Uttarpara Railway Station with regular train services to Kolkata and nearby cities.</p>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Easy Accessibility</h4>
+                                    <p class="text-gray-600">Well-connected by road with ample parking space for 22 vehicles. Close to public transportation hubs.</p>
                                 </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-gold mt-1 mr-3"></i>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-train text-amaranth-500 mt-1 mr-4"></i>
                                 <div>
-                                    <span class="font-medium text-gray-800">Landmark Access:</span>
-                                    <p class="text-gray-600">Located near the Uttarpara Telephone Exchange, a well-known landmark that makes it easy for guests to find us.</p>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Transportation Links</h4>
+                                    <p class="text-gray-600">Uttarpara Railway Station within 2 km. Multiple bus routes and easy access from Kolkata (15 km away).</p>
                                 </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-hotel text-gold mt-1 mr-3"></i>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-utensils text-amaranth-500 mt-1 mr-4"></i>
                                 <div>
-                                    <span class="font-medium text-gray-800">Nearby Accommodations:</span>
-                                    <p class="text-gray-600">Several quality hotels and guest houses within a short distance for out-of-town guests.</p>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Nearby Amenities</h4>
+                                    <p class="text-gray-600">Surrounded by essential services, hotels for out-of-town guests, and dining options for extended celebrations.</p>
                                 </div>
-                            </li>
-                        </ul>
-                        <a href="contact.html#location" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
-                            Get Directions
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <p class="text-gray-600 text-sm mb-4">
+                                <i class="fas fa-info-circle text-amaranth-500 mr-2"></i>
+                                Need detailed directions or want to plan your route?
+                            </p>
+                            <a href="{% url 'website:contact' %}#location-map" class="inline-flex items-center text-amaranth-500 hover:text-amaranth-600 font-medium transition-colors">
+                                View Full Location Details
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div data-aos="fade-left" class="h-96 md:h-full">
-                    <div class="relative h-full rounded-xl overflow-hidden shadow-lg">
-                        <!-- Replace with an actual Google Maps iframe or better yet, a static location image -->
-                        <img src="{% static 'images/about/location-map.jpg' %}" alt="Map showing location of Shagun Banquet Hall" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <a href="https://maps.google.com" target="_blank" class="bg-white hover:bg-amaranth-500 text-amaranth-500 hover:text-white font-medium py-3 px-6 rounded-full transition-colors flex items-center">
-                                <i class="fas fa-map-marked-alt mr-2"></i>
-                                View on Google Maps
+                <div data-aos="fade-left">
+                    <div class="bg-white p-6 rounded-xl shadow-lg h-full">
+                        <h3 class="text-xl font-serif font-semibold mb-4 text-gray-800">
+                            Find Us Here
+                        </h3>
+                        <div class="relative w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-md mb-4">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                frameborder="0" style="border:0"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed/v1/place?key={{ google_maps_api_key }}&q=Shagun+Banquet+Hall,105+Bijay+Krishna+Street,Kotrung,Uttarpara,West+Bengal"
+                                allowfullscreen>
+                            </iframe>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Shagun+Banquet+Hall,105+Bijay+Krishna+Street,Kotrung,Uttarpara,West+Bengal" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 left-3 bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-4 rounded-lg shadow-md transition-colors text-sm">
+                                <i class="fas fa-directions mr-2"></i>Get Directions
                             </a>
+                        </div>
+                        
+                        <!-- Address Info -->
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <p class="text-gray-800 font-medium mb-1">
+                                <i class="fas fa-map-marker-alt text-amaranth-500 mr-2"></i>
+                                105, Bijay Krishna Street
+                            </p>
+                            <p class="text-gray-600 text-sm ml-6 mb-3">
+                                Near Telephone Exchange, Kotrung<br>
+                                Uttarpara, West Bengal
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-2">
+                                <a href="tel:+918334911907" class="inline-flex items-center justify-center text-amaranth-500 hover:text-amaranth-600 transition-colors text-sm">
+                                    <i class="fas fa-phone mr-2"></i>+91 83349 11907
+                                </a>
+                                <a href="{% url 'website:contact' %}" class="inline-flex items-center justify-center text-amaranth-500 hover:text-amaranth-600 transition-colors text-sm">
+                                    <i class="fas fa-info-circle mr-2"></i>More Details
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

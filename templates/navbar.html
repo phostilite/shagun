@@ -14,7 +14,7 @@
             <a href="{% url 'website:about' %}" class="{% if request.resolver_match.url_name == 'about' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">About Us</a>
             <a href="{% url 'website:gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Gallery</a>
             <a href="{% url 'website:contact' %}#location-map" class="text-gray-700 hover:text-amaranth-500 font-medium text-sm uppercase transition-colors">Location</a>
-            <a href="#" class="text-gray-700 hover:text-amaranth-500 font-medium text-sm uppercase transition-colors">Google Reviews</a>
+            <a href="{% url 'website:testimonials' %}" class="text-gray-700 hover:text-amaranth-500 font-medium text-sm uppercase transition-colors">Google Reviews</a>
             <a href="{% url 'website:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Contact Us</a>
         </nav>
         
