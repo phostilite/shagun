@@ -2,59 +2,57 @@
 <!-- Header/Navigation -->
 <header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
     <div class="container mx-auto px-2 md:px-4 flex justify-between items-center py-2">
-        <!-- Logo with Call Button -->
+        <!-- Logo -->
         <div class="flex items-center space-x-3">
             <a href="{% url 'website:index' %}" class="flex items-center">
                 <img src="{% static 'images/logo.png' %}" alt="Shagun Banquet Hall Logo" class="h-16">
             </a>
-            <!-- Call Button -->
-            <a href="tel:+919876543210" 
-               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-amaranth-500 hover:bg-amaranth-600 text-white rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
-               title="Call Shagun Banquet Hall">
-                <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
-            </a>
         </div>
         
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-8">
-            <a href="{% url 'website:index' %}" class="{% if request.resolver_match.url_name == 'index' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Home</a>
+        <nav class="hidden md:flex space-x-8 items-center">
             <a href="{% url 'website:about' %}" class="{% if request.resolver_match.url_name == 'about' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">About Us</a>
-            <a href="{% url 'website:venues' %}" class="{% if request.resolver_match.url_name == 'venues' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Venues & Spaces</a>
-            <a href="{% url 'website:services' %}" class="{% if request.resolver_match.url_name == 'services' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Services</a>
             <a href="{% url 'website:gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Gallery</a>
-            <a href="{% url 'website:packages' %}" class="{% if request.resolver_match.url_name == 'packages' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Packages</a>
-            <a href="{% url 'website:testimonials' %}" class="{% if request.resolver_match.url_name == 'testimonials' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Testimonials</a>
-            <a href="{% url 'website:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Contact</a>
+            <a href="{% url 'website:contact' %}#location-map" class="text-gray-700 hover:text-amaranth-500 font-medium text-sm uppercase transition-colors">Location</a>
+            <a href="#" class="text-gray-700 hover:text-amaranth-500 font-medium text-sm uppercase transition-colors">Google Reviews</a>
+            <a href="{% url 'website:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Contact Us</a>
         </nav>
         
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden focus:outline-none" id="menu-toggle">
-            <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
+        <!-- Mobile Menu Button and Call Button -->
+        <div class="md:hidden flex items-center space-x-3">
+            <!-- Call Button (Mobile Only) -->
+            <a href="tel:+91XXXXXXXXXX" 
+            class="flex items-center justify-center w-10 h-10 bg-amaranth-500 hover:bg-amaranth-600 text-white rounded-full shadow-md transition-colors"
+            title="Call Now">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6 text-amaranth-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
         
         <!-- Contact Button -->
         <a href="{% url 'website:contact' %}" class="hidden md:block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm">
-            Book Now
+            Book a Visit
         </a>
     </div>
     
     <!-- Mobile Navigation Menu (Hidden by default) -->
     <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-lg p-4" id="mobile-menu">
         <nav class="flex flex-col space-y-4">
-            <a href="{% url 'website:index' %}" class="{% if request.resolver_match.url_name == 'index' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Home</a>
             <a href="{% url 'website:about' %}" class="{% if request.resolver_match.url_name == 'about' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">About Us</a>
-            <a href="{% url 'website:venues' %}" class="{% if request.resolver_match.url_name == 'venues' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Venues & Spaces</a>
-            <a href="{% url 'website:services' %}" class="{% if request.resolver_match.url_name == 'services' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Services</a>
             <a href="{% url 'website:gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Gallery</a>
-            <a href="{% url 'website:packages' %}" class="{% if request.resolver_match.url_name == 'packages' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Packages</a>
-            <a href="{% url 'website:testimonials' %}" class="{% if request.resolver_match.url_name == 'testimonials' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Testimonials</a>
-            <a href="{% url 'website:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Contact</a>
+            <a href="{% url 'website:contact' %}#location-map" class="text-gray-700 hover:text-amaranth-500 font-medium text-sm uppercase transition-colors">Location</a>
+            <a href="#" class="text-gray-700 hover:text-amaranth-500 font-medium text-sm uppercase transition-colors">Google Reviews</a>
+            <a href="{% url 'website:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}text-amaranth-500{% else %}text-gray-700 hover:text-amaranth-500{% endif %} font-medium text-sm uppercase transition-colors">Contact Us</a>
             <a href="{% url 'website:contact' %}" class="bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-full transition-colors text-sm text-center mt-2">
-                Book Now
+                Book a Visit
             </a>
         </nav>
     </div>

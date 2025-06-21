@@ -147,6 +147,13 @@
                             <p class="text-xl md:text-2xl mb-8 text-shadow">
                                 Where Memorable Celebrations Come to Life
                             </p>
+                            <div class="bg-gold bg-opacity-20 backdrop-blur-sm rounded-full py-3 px-6 inline-block mb-8" data-aos="fade-up" data-aos-delay="300">
+                                <p class="text-white font-semibold text-lg md:text-xl">
+                                    <i class="fas fa-star mr-2"></i>
+                                    The Only Pillar-less, Centrally Air-Conditioned Banquet Hall in the District
+                                    <i class="fas fa-star ml-2"></i>
+                                </p>
+                            </div>
                             <a href="{% url 'website:contact' %}" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
                                 Plan Your Special Day
                             </a>
@@ -167,6 +174,13 @@
                             <p class="text-xl md:text-2xl mb-8 text-shadow">
                                 Creating Magical Moments Since [Year]
                             </p>
+                            <div class="bg-gold bg-opacity-20 backdrop-blur-sm rounded-full py-3 px-6 inline-block mb-8" data-aos="fade-up" data-aos-delay="300">
+                                <p class="text-white font-semibold text-lg md:text-xl">
+                                    <i class="fas fa-star mr-2"></i>
+                                    The Only Pillar-less, Centrally Air-Conditioned Banquet Hall in the District
+                                    <i class="fas fa-star ml-2"></i>
+                                </p>
+                            </div>
                             <a href="{% url 'website:gallery' %}" class="inline-block bg-gold hover:bg-gold-600 text-white font-medium py-3 px-8 rounded-full transition-colors text-lg">
                                 Explore Our Gallery
                             </a>
@@ -187,6 +201,13 @@
                             <p class="text-xl md:text-2xl mb-8 text-shadow">
                                 Personalized Services for Your Perfect Event
                             </p>
+                            <div class="bg-gold bg-opacity-20 backdrop-blur-sm rounded-full py-3 px-6 inline-block mb-8" data-aos="fade-up" data-aos-delay="300">
+                                <p class="text-white font-semibold text-lg md:text-xl">
+                                    <i class="fas fa-star mr-2"></i>
+                                    The Only Pillar-less, Centrally Air-Conditioned Banquet Hall in the District
+                                    <i class="fas fa-star ml-2"></i>
+                                </p>
+                            </div>
                             <a href="{% url 'website:services' %}" class="inline-block bg-white text-amaranth-500 hover:text-amaranth-600 font-medium py-3 px-8 rounded-full transition-colors text-lg">
                                 Discover Our Services
                             </a>
@@ -250,7 +271,7 @@
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- Main Hall - 1st Floor -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative h-64 overflow-hidden">
@@ -317,6 +338,44 @@
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-gold mr-2 mt-1"></i>
                                     <span>Balcony provides <strong>bonus usable space</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="{% url 'website:venues' %}" class="inline-block w-full text-center bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-2 px-6 rounded-lg transition-colors text-sm">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Rooftop Party Area -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="{% static 'images/rooftop-area.jpg' %}" alt="Rooftop Party Area" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-serif font-medium">Rooftop Party Area</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">A unique blend of indoor and outdoor spaces perfect for intimate celebrations and small gatherings.</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-medium text-gray-800 mb-3">Key Features:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mr-2 mt-1"></i>
+                                    <span>Perfect for intimate gatherings (25-80 guests)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mr-2 mt-1"></i>
+                                    <span>Combination of covered indoor area and open-air space</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mr-2 mt-1"></i>
+                                    <span>Panoramic views of surrounding area</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-gold mr-2 mt-1"></i>
+                                    <span>Ideal for birthdays, anniversaries, and corporate events</span>
                                 </li>
                             </ul>
                         </div>
@@ -543,6 +602,61 @@
                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Portfolio Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 gold-underline">
+                    Our Event Legacy
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    With over 5,000 successful events hosted, we've been part of countless cherished memories
+                </p>
+            </div>
+            
+            <!-- Event Statistics -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-serif font-bold text-amaranth-500 mb-2" data-counter="2500">0</div>
+                    <p class="text-gray-600">Weddings</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-serif font-bold text-amaranth-500 mb-2" data-counter="1200">0</div>
+                    <p class="text-gray-600">Birthdays</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-serif font-bold text-amaranth-500 mb-2" data-counter="800">0</div>
+                    <p class="text-gray-600">Corporate Events</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-serif font-bold text-amaranth-500 mb-2" data-counter="300">0</div>
+                    <p class="text-gray-600">Anniversaries</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-4xl font-serif font-bold text-amaranth-500 mb-2" data-counter="200">0</div>
+                    <p class="text-gray-600">Other Events</p>
+                </div>
+            </div>
+            
+            <!-- Event Gallery Preview -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+                <div class="relative overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="{% static 'images/events/wedding-1.jpg' %}" alt="Wedding Event" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white font-medium">Wedding Celebration</p>
+                    </div>
+                </div>
+                <!-- Add more event images similarly -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="{% url 'website:gallery' %}" class="inline-block bg-amaranth-500 hover:bg-amaranth-600 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                    View Full Gallery
                 </a>
             </div>
         </div>
